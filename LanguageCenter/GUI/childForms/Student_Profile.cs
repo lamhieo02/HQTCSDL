@@ -12,9 +12,26 @@ namespace LanguageCenter.GUI.childForms
 {
     public partial class Student_Profile : Form
     {
+        public int ID { get; set; }
+        public string Username { get; set; }
+        public string Address { get; set; }
+        public string Date_Birth { get; set; }
+        public string First_Name { get; set; }
+        public string Last_Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
         public Student_Profile()
         {
             InitializeComponent();
+        }
+
+        private void Student_Profile_Load(object sender, EventArgs e)
+        {
+            txtName.Text = Last_Name + " " + First_Name;
+            txtAddress.Text = Address;
+            txtDateBirth.Text = Date_Birth;
+            label11.Text = Email;
+            txtPhone.Text = Phone;
         }
     }
 }

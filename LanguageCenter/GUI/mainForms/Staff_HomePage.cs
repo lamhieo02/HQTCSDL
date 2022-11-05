@@ -1,4 +1,6 @@
-﻿using LanguageCenter.GUI.mainForms;
+﻿using LanguageCenter.DTO;
+using LanguageCenter.GUI.childForms;
+using LanguageCenter.GUI.mainForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +31,8 @@ namespace LanguageCenter.GUI
         }
         private void Staff_HomePage_Load(object sender, EventArgs e)
         {
+            txtName.Text = "          " + Last_Name + " " + First_Name;
+
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
@@ -56,31 +60,54 @@ namespace LanguageCenter.GUI
             } 
         }
 
-        private void profileBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_Profile(), sender);
-        }
-
-        private void scheduleBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_Schedule(), sender);
-        }
-
-        private void scoreBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_Score(), sender);
-        }
-
-        private void changePwBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_ChangePw(), sender);
-        }
-
         private void logoutBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             var loginForm = new Login();
             loginForm.ShowDialog();
-        }  
+        }
+        private void profileBtn_Click(object sender, EventArgs e)
+        {
+            var profile = new childForms.Profile();
+            profile.ID = ID;
+            profile.Username = Username;
+            profile.Position = Position;
+            profile.Address = Address;
+            profile.Date_Birth = Date_Birth;
+            profile.First_Name = First_Name;
+            profile.Last_Name = Last_Name;
+            profile.Email = Email;
+            profile.Phone = Phone;
+            OpenChildForm(profile, sender);
+        }
+        private void changePwBtn_Click(object sender, EventArgs e)
+        {
+            var changePw = new ChangePassword();
+            changePw.ShowDialog();
+        }
+        private void studentManageBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.StudentManage(), sender);
+        }
+
+        private void teacherManageBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.TeacherManage(), sender);
+        }
+
+        private void courseManageBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.CourseManage(), sender);
+        }
+
+        private void classManageBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.ClassManage(), sender);
+        }
+
+        private void paymentManageBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.PaymentManage(), sender);
+        }
     }
 }

@@ -34,33 +34,48 @@ namespace LanguageCenter.GUI.mainForms
             }
             AccountDAO accountDAO = new AccountDAO();
             Account account = accountDAO.getAccountByUsername(username);
-            string account_pw = account.Password;
-            string account_username = account.Username;
-            if (password != account_pw || username != account_username)
+
+            if (account == null)
             {
-                MessageBox.Show("nhập sai thông tin!");
+                MessageBox.Show("User không tồn tại!",
+                    "Lỗi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
-            else
+           else
             {
-                int role = accountDAO.getRoleByUserName(username);
-                // LoginStudent();
-                if (role == 1)
+                string account_pw = account.Password;
+                string account_username = account.Username;
+                if (password != account_pw || username != account_username)
                 {
-                    LoginAdmin();
+                    MessageBox.Show("Sai mật khẩu",
+                   "Lỗi",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
                 }
-                if (role == 2)
+                else
                 {
-                    LoginStaff();
-                }
-                if (role == 3)
-                {
-                    LoginStudent();
-                }
-                if (role == 4)
-                {
-                    LoginTeacher();
+                    int role = accountDAO.getRoleByUserName(username);
+                    // LoginStudent();
+                    if (role == 1)
+                    {
+                        LoginAdmin();
+                    }
+                    if (role == 2)
+                    {
+                        LoginStaff();
+                    }
+                    if (role == 3)
+                    {
+                        LoginStudent();
+                    }
+                    if (role == 4)
+                    {
+                        LoginTeacher();
+                    }
                 }
             }
+           
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -76,6 +91,7 @@ namespace LanguageCenter.GUI.mainForms
             Admin_HomePage staffForm = new Admin_HomePage();
             staffForm.ID = staff.ID;
             staffForm.Username = staff.Username;
+            staffForm.Position = staff.Position;
             staffForm.Address = staff.Address;
             staffForm.Date_Birth = staff.Date_Birth;
             staffForm.First_Name = staff.First_Name;
@@ -94,6 +110,7 @@ namespace LanguageCenter.GUI.mainForms
             Staff staff = staff_dao.getStaffByUsername(username);
             Staff_HomePage staffForm = new Staff_HomePage();
             staffForm.ID = staff.ID;
+            staffForm.Position = staff.Position;
             staffForm.Username = staff.Username;
             staffForm.Address = staff.Address;
             staffForm.Date_Birth = staff.Date_Birth;

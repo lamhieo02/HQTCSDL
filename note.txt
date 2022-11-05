@@ -1,0 +1,7 @@
+thao tác chính trên giao diện nhân viên
+mục đích của giao diện học viên và giảng viên chỉ để cho họ xem thông tin để nắm bắt hợp tác thực hiện lớp học offline ở ngoài
+(ở đồ án này ta chỉ quản lí các lớp học offline nên tất cả những chức năng thao tác đều do nhân viên và admin xử lí => giao diện học viên và giảng viên chỉ để bấm xem các mục)
+
+đối với 1 lớp học: ví dụ về lớp ielts 6.5 thì khóa này cần các môn reading 6.5, listening 6.5
++ thêm thời khóa biểu(gồm môn học, giáo viên)
++ thêm học viên

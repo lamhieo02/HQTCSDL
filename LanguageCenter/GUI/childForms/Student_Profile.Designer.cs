@@ -34,12 +34,12 @@ namespace LanguageCenter.GUI.childForms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtDateBirth = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -93,15 +93,15 @@ namespace LanguageCenter.GUI.childForms
             this.label5.TabIndex = 4;
             this.label5.Text = "Email:";
             // 
-            // label6
+            // txtName
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(196, 99);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 24);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Phạm Quỳnh Hương";
+            this.txtName.AutoSize = true;
+            this.txtName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(196, 99);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(188, 24);
+            this.txtName.TabIndex = 5;
+            this.txtName.Text = "Phạm Quỳnh Hương";
             // 
             // label7
             // 
@@ -113,25 +113,25 @@ namespace LanguageCenter.GUI.childForms
             this.label7.TabIndex = 6;
             this.label7.Text = "Số điện thoại:";
             // 
-            // label9
+            // txtDateBirth
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(196, 155);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 24);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "31/01/2002";
+            this.txtDateBirth.AutoSize = true;
+            this.txtDateBirth.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateBirth.Location = new System.Drawing.Point(196, 155);
+            this.txtDateBirth.Name = "txtDateBirth";
+            this.txtDateBirth.Size = new System.Drawing.Size(114, 24);
+            this.txtDateBirth.TabIndex = 8;
+            this.txtDateBirth.Text = "31/01/2002";
             // 
-            // label10
+            // txtAddress
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(196, 210);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(441, 24);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Số 1 Võ Văn Ngân, Phường Linh Chiểu, Thủ Đức ";
+            this.txtAddress.AutoSize = true;
+            this.txtAddress.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(196, 210);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(441, 24);
+            this.txtAddress.TabIndex = 9;
+            this.txtAddress.Text = "Số 1 Võ Văn Ngân, Phường Linh Chiểu, Thủ Đức ";
             // 
             // label11
             // 
@@ -143,15 +143,15 @@ namespace LanguageCenter.GUI.childForms
             this.label11.TabIndex = 10;
             this.label11.Text = "qhuong123@gmail.com";
             // 
-            // label12
+            // txtPhone
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(196, 317);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 24);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "1234567890";
+            this.txtPhone.AutoSize = true;
+            this.txtPhone.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(196, 317);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(120, 24);
+            this.txtPhone.TabIndex = 11;
+            this.txtPhone.Text = "1234567890";
             // 
             // label13
             // 
@@ -169,12 +169,12 @@ namespace LanguageCenter.GUI.childForms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtDateBirth);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -182,6 +182,7 @@ namespace LanguageCenter.GUI.childForms
             this.Controls.Add(this.label1);
             this.Name = "Student_Profile";
             this.Text = "Student_Profile";
+            this.Load += new System.EventHandler(this.Student_Profile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,12 +195,12 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label txtName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label txtDateBirth;
+        private System.Windows.Forms.Label txtAddress;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label txtPhone;
         private System.Windows.Forms.Label label13;
     }
 }

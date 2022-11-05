@@ -30,7 +30,7 @@ namespace LanguageCenter.GUI
         }
         private void Student_HomePage_Load(object sender, EventArgs e)
         {
-            txtUsername.Text = Username;
+            txtName.Text = "          " + Last_Name + " " + First_Name;
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
@@ -60,7 +60,16 @@ namespace LanguageCenter.GUI
 
         private void profileBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new childForms.Student_Profile(), sender);
+            var profile = new childForms.Student_Profile();
+            profile.ID = ID;
+            profile.Username = Username;
+            profile.Address = Address;
+            profile.Date_Birth = Date_Birth;
+            profile.First_Name = First_Name;
+            profile.Last_Name = Last_Name;
+            profile.Email = Email;
+            profile.Phone = Phone;
+            OpenChildForm(profile, sender);
         }
 
         private void scheduleBtn_Click(object sender, EventArgs e)
@@ -75,7 +84,8 @@ namespace LanguageCenter.GUI
 
         private void changePwBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new childForms.Student_ChangePw(), sender);
+            var changePw = new ChangePassword();
+            changePw.ShowDialog();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)

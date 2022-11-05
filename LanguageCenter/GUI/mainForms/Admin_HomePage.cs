@@ -16,6 +16,7 @@ namespace LanguageCenter.GUI
         private Form activeForm;
         public int ID { get; set; }
         public string Username { get; set; }
+        public string Position { get; set; }
         public string Address { get; set; }
         public string Date_Birth { get; set; }
         public string First_Name { get; set; }
@@ -28,6 +29,7 @@ namespace LanguageCenter.GUI
         }
         private void Admin_HomePage_Load(object sender, EventArgs e)
         {
+            txtName.Text = "          " + Last_Name + " " + First_Name;
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
@@ -70,8 +72,9 @@ namespace LanguageCenter.GUI
             OpenChildForm(new childForms.StaffManage(), sender);
         }
         private void changePwBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_ChangePw(), sender);
+        {        
+            var changePw = new ChangePassword();
+            changePw.ShowDialog();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -83,7 +86,22 @@ namespace LanguageCenter.GUI
 
         private void profileBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new childForms.Profile(), sender);
+            var profile = new childForms.Profile();
+            profile.ID = ID;
+            profile.Username = Username;
+            profile.Position = Position;
+            profile.Address = Address;
+            profile.Date_Birth = Date_Birth;
+            profile.First_Name = First_Name;
+            profile.Last_Name = Last_Name;
+            profile.Email = Email;
+            profile.Phone = Phone;
+            OpenChildForm(profile, sender);
+        }
+
+        private void SalaryMnBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.SalaryManage(), sender);
         }
     }
 }

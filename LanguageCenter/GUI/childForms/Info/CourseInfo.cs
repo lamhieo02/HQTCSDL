@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LanguageCenter.GUI.childForms
 {
-    public partial class Student_ChangePw : Form
+    public partial class CourseInfo : Form
     {
-        public Student_ChangePw()
+        public CourseInfo()
         {
             InitializeComponent();
         }

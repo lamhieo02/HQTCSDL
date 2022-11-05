@@ -1,7 +1,7 @@
 ﻿
 namespace LanguageCenter.GUI.childForms
 {
-    partial class StudentManage
+    partial class CourseManage
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace LanguageCenter.GUI.childForms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -39,7 +40,7 @@ namespace LanguageCenter.GUI.childForms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -47,6 +48,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -54,6 +56,14 @@ namespace LanguageCenter.GUI.childForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1327, 85);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Image = global::LanguageCenter.Properties.Resources.plus;
+            this.label1.Location = new System.Drawing.Point(1072, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 60);
+            this.label1.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -135,15 +145,18 @@ namespace LanguageCenter.GUI.childForms
             this.Column5.Name = "Column5";
             this.Column5.Width = 150;
             // 
-            // label1
+            // label2
             // 
-            this.label1.Image = global::LanguageCenter.Properties.Resources.plus;
-            this.label1.Location = new System.Drawing.Point(1072, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 60);
-            this.label1.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Quản lí môn học";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // StudentManage
+            // CourseManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,8 +164,8 @@ namespace LanguageCenter.GUI.childForms
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "StudentManage";
-            this.Text = "Admin_StudentManage";
+            this.Name = "CourseManage";
+            this.Text = "Course Manage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -174,5 +187,6 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
