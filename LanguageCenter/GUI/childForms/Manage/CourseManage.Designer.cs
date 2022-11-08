@@ -35,6 +35,7 @@ namespace LanguageCenter.GUI.childForms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnListCourse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -42,6 +43,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnListCourse);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
@@ -104,6 +106,17 @@ namespace LanguageCenter.GUI.childForms
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(1180, 531);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // btnListCourse
+            // 
+            this.btnListCourse.Location = new System.Drawing.Point(1012, 26);
+            this.btnListCourse.Name = "btnListCourse";
+            this.btnListCourse.Size = new System.Drawing.Size(156, 23);
+            this.btnListCourse.TabIndex = 5;
+            this.btnListCourse.Text = "Hien Thi Danh Sach";
+            this.btnListCourse.UseVisualStyleBackColor = true;
+            this.btnListCourse.Click += new System.EventHandler(this.btnListCourse_Click);
             // 
             // CourseManage
             // 
@@ -132,5 +145,6 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnListCourse;
     }
 }
