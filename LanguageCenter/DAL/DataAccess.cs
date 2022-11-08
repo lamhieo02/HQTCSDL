@@ -15,7 +15,7 @@ namespace LanguageCenter.DAL
         {
             if (conn == null)
             {
-                string connectionString = @"Data Source=LAPTOP-AU2P2PHD;Initial Catalog=LanguageCenter;Integrated Security=True";
+                string connectionString = @"Data Source=LamNguyen;Initial Catalog=LanguageCenter;Integrated Security=True";
                 conn = new SqlConnection(connectionString);
                 conn.Open();
             }
