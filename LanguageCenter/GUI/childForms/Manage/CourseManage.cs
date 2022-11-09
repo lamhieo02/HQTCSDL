@@ -130,7 +130,7 @@ namespace LanguageCenter.GUI.childForms
             }
 
             dataGridView2.DataSource = dt;
-            conn.Close();
+            //conn.Close(); -> giữ conn luôn open để chức năng này có thể cập nhật được real-time khi ta cập nhật dữ liệu trong cơ sở dữ liệu
         }
     }
 }
