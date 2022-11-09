@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageCenter.GUI.childForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,15 +48,20 @@ namespace LanguageCenter.GUI.childForms
         //        CategoryName = categoryName;
         //    }
         //}
+        SqlConnection conn = DAL.DataAccess.getConnection();
         private void btnListCourse_Click(object sender, EventArgs e)
         {
+            
             DataTable dt = new DataTable();
-            SqlConnection conn = DAL.DataAccess.getConnection();
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
             SqlCommand cmd = new SqlCommand("select * from Courses", conn);
             SqlDataReader reader = cmd.ExecuteReader();
             dt.Load(reader);
             dataGridView2.DataSource = dt;
-            MessageBox.Show("HIHI");
+            //MessageBox.Show("HIHI");
             conn.Close();
 
             conn.Open();
@@ -131,6 +137,13 @@ namespace LanguageCenter.GUI.childForms
 
             dataGridView2.DataSource = dt;
             //conn.Close(); -> giữ conn luôn open để chức năng này có thể cập nhật được real-time khi ta cập nhật dữ liệu trong cơ sở dữ liệu
+        }
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            //Form1 f1 = new Form1();
+            Form childForm = new childForms.CourseInfo();
+            childForm.ShowDialog();
+            //this.Close();
         }
     }
 }

@@ -34,27 +34,25 @@ namespace LanguageCenter.GUI.childForms
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbxTerm = new System.Windows.Forms.TextBox();
+            this.tbxDescr = new System.Windows.Forms.TextBox();
+            this.tbxLanguageID = new System.Windows.Forms.TextBox();
+            this.tbxLevelID = new System.Windows.Forms.TextBox();
+            this.tbxLesson = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbxCategoryID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 26);
+            this.label1.Location = new System.Drawing.Point(262, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 29);
+            this.label1.Size = new System.Drawing.Size(214, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Course Information:";
             // 
@@ -62,9 +60,9 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(77, 361);
+            this.label7.Location = new System.Drawing.Point(68, 289);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 24);
+            this.label7.Size = new System.Drawing.Size(81, 21);
             this.label7.TabIndex = 11;
             this.label7.Text = "Level_ID:";
             // 
@@ -72,9 +70,9 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 307);
+            this.label5.Location = new System.Drawing.Point(33, 246);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 24);
+            this.label5.Size = new System.Drawing.Size(114, 21);
             this.label5.TabIndex = 10;
             this.label5.Text = "Language_ID:";
             // 
@@ -82,9 +80,9 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(109, 253);
+            this.label4.Location = new System.Drawing.Point(97, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 24);
+            this.label4.Size = new System.Drawing.Size(55, 21);
             this.label4.TabIndex = 9;
             this.label4.Text = "Term:";
             // 
@@ -92,149 +90,140 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 202);
+            this.label3.Location = new System.Drawing.Point(50, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
+            this.label3.Size = new System.Drawing.Size(100, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Description:";
             // 
-            // label2
+            // tbxTerm
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(135, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "ID:";
+            this.tbxTerm.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbxTerm.Location = new System.Drawing.Point(159, 200);
+            this.tbxTerm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxTerm.Name = "tbxTerm";
+            this.tbxTerm.Size = new System.Drawing.Size(464, 28);
+            this.tbxTerm.TabIndex = 13;
             // 
-            // textBox1
+            // tbxDescr
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox1.Location = new System.Drawing.Point(179, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(522, 32);
-            this.textBox1.TabIndex = 12;
+            this.tbxDescr.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbxDescr.Location = new System.Drawing.Point(159, 159);
+            this.tbxDescr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxDescr.Name = "tbxDescr";
+            this.tbxDescr.Size = new System.Drawing.Size(464, 28);
+            this.tbxDescr.TabIndex = 14;
             // 
-            // textBox2
+            // tbxLanguageID
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox2.Location = new System.Drawing.Point(179, 250);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(522, 32);
-            this.textBox2.TabIndex = 13;
+            this.tbxLanguageID.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbxLanguageID.Location = new System.Drawing.Point(159, 246);
+            this.tbxLanguageID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxLanguageID.Name = "tbxLanguageID";
+            this.tbxLanguageID.Size = new System.Drawing.Size(464, 28);
+            this.tbxLanguageID.TabIndex = 15;
             // 
-            // textBox3
+            // tbxLevelID
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox3.Location = new System.Drawing.Point(179, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(522, 32);
-            this.textBox3.TabIndex = 14;
+            this.tbxLevelID.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbxLevelID.Location = new System.Drawing.Point(159, 286);
+            this.tbxLevelID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxLevelID.Name = "tbxLevelID";
+            this.tbxLevelID.Size = new System.Drawing.Size(464, 28);
+            this.tbxLevelID.TabIndex = 16;
             // 
-            // textBox4
+            // tbxLesson
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox4.Location = new System.Drawing.Point(179, 307);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(522, 32);
-            this.textBox4.TabIndex = 15;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox5.Location = new System.Drawing.Point(179, 358);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(522, 32);
-            this.textBox5.TabIndex = 16;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.button2.Image = global::LanguageCenter.Properties.Resources.remove__1_2;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(565, 474);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(136, 62);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "   Xóa";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.button1.Image = global::LanguageCenter.Properties.Resources.refresh;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(373, 474);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(136, 62);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "   Sửa";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox6.Location = new System.Drawing.Point(179, 149);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(522, 32);
-            this.textBox6.TabIndex = 19;
+            this.tbxLesson.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbxLesson.Location = new System.Drawing.Point(159, 119);
+            this.tbxLesson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxLesson.Name = "tbxLesson";
+            this.tbxLesson.Size = new System.Drawing.Size(464, 28);
+            this.tbxLesson.TabIndex = 19;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(95, 152);
+            this.label6.Location = new System.Drawing.Point(84, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 24);
+            this.label6.Size = new System.Drawing.Size(67, 21);
             this.label6.TabIndex = 20;
             this.label6.Text = "Lesson:";
             // 
-            // textBox7
+            // tbxCategoryID
             // 
-            this.textBox7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox7.Location = new System.Drawing.Point(179, 413);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(522, 32);
-            this.textBox7.TabIndex = 22;
+            this.tbxCategoryID.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbxCategoryID.Location = new System.Drawing.Point(159, 330);
+            this.tbxCategoryID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxCategoryID.Name = "tbxCategoryID";
+            this.tbxCategoryID.Size = new System.Drawing.Size(464, 28);
+            this.tbxCategoryID.TabIndex = 22;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 416);
+            this.label8.Location = new System.Drawing.Point(39, 333);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 24);
+            this.label8.Size = new System.Drawing.Size(109, 21);
             this.label8.TabIndex = 21;
             this.label8.Text = "Category_ID:";
             // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXacNhan.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnXacNhan.Image = global::LanguageCenter.Properties.Resources.add_button;
+            this.btnXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXacNhan.Location = new System.Drawing.Point(276, 362);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnXacNhan.Size = new System.Drawing.Size(184, 50);
+            this.btnXacNhan.TabIndex = 23;
+            this.btnXacNhan.Text = "Xác Nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnHuy.Image = global::LanguageCenter.Properties.Resources.delete_button;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Location = new System.Drawing.Point(466, 362);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnHuy.Size = new System.Drawing.Size(157, 50);
+            this.btnHuy.TabIndex = 24;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // CourseInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 554);
-            this.Controls.Add(this.textBox7);
+            this.ClientSize = new System.Drawing.Size(725, 465);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnXacNhan);
+            this.Controls.Add(this.tbxCategoryID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxLesson);
+            this.Controls.Add(this.tbxLevelID);
+            this.Controls.Add(this.tbxLanguageID);
+            this.Controls.Add(this.tbxDescr);
+            this.Controls.Add(this.tbxTerm);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CourseInfo";
             this.Text = "StaffInfo";
             this.ResumeLayout(false);
@@ -249,17 +238,15 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbxTerm;
+        private System.Windows.Forms.TextBox tbxDescr;
+        private System.Windows.Forms.TextBox tbxLanguageID;
+        private System.Windows.Forms.TextBox tbxLevelID;
+        private System.Windows.Forms.TextBox tbxLesson;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbxCategoryID;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnXacNhan;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

@@ -30,12 +30,13 @@ namespace LanguageCenter.GUI.childForms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnListCourse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnListCourse = new System.Windows.Forms.Button();
+            this.btnAddCourse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -43,6 +44,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAddCourse);
             this.panel1.Controls.Add(this.btnListCourse);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -51,8 +53,18 @@ namespace LanguageCenter.GUI.childForms
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1180, 68);
+            this.panel1.Size = new System.Drawing.Size(1352, 122);
             this.panel1.TabIndex = 0;
+            // 
+            // btnListCourse
+            // 
+            this.btnListCourse.Location = new System.Drawing.Point(1012, 26);
+            this.btnListCourse.Name = "btnListCourse";
+            this.btnListCourse.Size = new System.Drawing.Size(173, 40);
+            this.btnListCourse.TabIndex = 5;
+            this.btnListCourse.Text = "Hien Thi Danh Sach";
+            this.btnListCourse.UseVisualStyleBackColor = true;
+            this.btnListCourse.Click += new System.EventHandler(this.btnListCourse_Click);
             // 
             // label2
             // 
@@ -86,12 +98,12 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 122);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1180, 531);
+            this.dataGridView1.Size = new System.Drawing.Size(1352, 576);
             this.dataGridView1.TabIndex = 1;
             // 
             // dataGridView2
@@ -99,30 +111,30 @@ namespace LanguageCenter.GUI.childForms
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 68);
+            this.dataGridView2.Location = new System.Drawing.Point(0, 122);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(1180, 531);
+            this.dataGridView2.Size = new System.Drawing.Size(1352, 576);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // btnListCourse
+            // btnAddCourse
             // 
-            this.btnListCourse.Location = new System.Drawing.Point(1012, 26);
-            this.btnListCourse.Name = "btnListCourse";
-            this.btnListCourse.Size = new System.Drawing.Size(156, 23);
-            this.btnListCourse.TabIndex = 5;
-            this.btnListCourse.Text = "Hien Thi Danh Sach";
-            this.btnListCourse.UseVisualStyleBackColor = true;
-            this.btnListCourse.Click += new System.EventHandler(this.btnListCourse_Click);
+            this.btnAddCourse.Location = new System.Drawing.Point(20, 72);
+            this.btnAddCourse.Name = "btnAddCourse";
+            this.btnAddCourse.Size = new System.Drawing.Size(126, 34);
+            this.btnAddCourse.TabIndex = 6;
+            this.btnAddCourse.Text = "Thêm Khóa Học";
+            this.btnAddCourse.UseVisualStyleBackColor = true;
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // CourseManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 599);
+            this.ClientSize = new System.Drawing.Size(1352, 698);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -146,5 +158,6 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnListCourse;
+        private System.Windows.Forms.Button btnAddCourse;
     }
 }

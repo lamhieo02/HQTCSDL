@@ -54,7 +54,7 @@ namespace LanguageCenter.GUI
                 childForm.BringToFront();
                 childForm.Show();
 
-            } 
+            }
         }
 
         private void studentMnBtn_Click(object sender, EventArgs e)

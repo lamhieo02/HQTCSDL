@@ -33,6 +33,7 @@ namespace LanguageCenter.GUI
             this.txtName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CourseMnBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.changePwBtn = new System.Windows.Forms.Button();
             this.SalaryMnBtn = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace LanguageCenter.GUI
             this.profileBtn = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.CourseMnBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelDesktopPane.SuspendLayout();
@@ -111,6 +111,27 @@ namespace LanguageCenter.GUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(243, 681);
             this.panel2.TabIndex = 2;
+            // 
+            // CourseMnBtn
+            // 
+            this.CourseMnBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.CourseMnBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CourseMnBtn.FlatAppearance.BorderSize = 0;
+            this.CourseMnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CourseMnBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.CourseMnBtn.ForeColor = System.Drawing.Color.White;
+            this.CourseMnBtn.Image = global::LanguageCenter.Properties.Resources.schedule;
+            this.CourseMnBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CourseMnBtn.Location = new System.Drawing.Point(0, 539);
+            this.CourseMnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CourseMnBtn.Name = "CourseMnBtn";
+            this.CourseMnBtn.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.CourseMnBtn.Size = new System.Drawing.Size(243, 77);
+            this.CourseMnBtn.TabIndex = 11;
+            this.CourseMnBtn.Text = "         Quản lí Khoá Học\r\n";
+            this.CourseMnBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CourseMnBtn.UseVisualStyleBackColor = false;
+            this.CourseMnBtn.Click += new System.EventHandler(this.CourseMnBtn_Click);
             // 
             // logoutBtn
             // 
@@ -279,27 +300,6 @@ namespace LanguageCenter.GUI
             this.button1.Size = new System.Drawing.Size(844, 681);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // CourseMnBtn
-            // 
-            this.CourseMnBtn.BackColor = System.Drawing.Color.MidnightBlue;
-            this.CourseMnBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CourseMnBtn.FlatAppearance.BorderSize = 0;
-            this.CourseMnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CourseMnBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.CourseMnBtn.ForeColor = System.Drawing.Color.White;
-            this.CourseMnBtn.Image = global::LanguageCenter.Properties.Resources.schedule;
-            this.CourseMnBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CourseMnBtn.Location = new System.Drawing.Point(0, 539);
-            this.CourseMnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CourseMnBtn.Name = "CourseMnBtn";
-            this.CourseMnBtn.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.CourseMnBtn.Size = new System.Drawing.Size(243, 77);
-            this.CourseMnBtn.TabIndex = 11;
-            this.CourseMnBtn.Text = "         Quản lí Khoá Học\r\n";
-            this.CourseMnBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CourseMnBtn.UseVisualStyleBackColor = false;
-            this.CourseMnBtn.Click += new System.EventHandler(this.CourseMnBtn_Click);
             // 
             // Admin_HomePage
             // 
