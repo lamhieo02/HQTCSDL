@@ -54,7 +54,7 @@ namespace LanguageCenter.GUI
                 childForm.BringToFront();
                 childForm.Show();
 
-            } 
+            }
         }
 
         private void studentMnBtn_Click(object sender, EventArgs e)
@@ -102,6 +102,11 @@ namespace LanguageCenter.GUI
         private void SalaryMnBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new childForms.SalaryManage(), sender);
+        }
+
+        private void CourseMnBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.CourseManage(), sender);
         }
     }
 }
