@@ -121,4 +121,7 @@ E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\o
 E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\bin\Debug\LanguageCenter.exe.config
 E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\bin\Debug\LanguageCenter.exe
 E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\bin\Debug\LanguageCenter.pdb
-E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\obj\Debug\LanguageCenter.GUI.childForms.Tmp.InputID_EditCourse.resources
+E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\obj\Debug\LanguageCenter.GUI.childForms.Tmp.InputID_DeleteCourse.resources
+E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\obj\Debug\LanguageCenter.GUI.childForms.Tmp.InputID_FindCourse.resources
+E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\obj\Debug\LanguageCenter.GUI.childForms.Tmp.InputID_EditCourses.resources
+E:\Tai Lieu Hoc Tap (2022-2023)\HQTCSDL\Project_CuoiKi\HQTCSDL1\LanguageCenter\obj\Debug\LanguageCenter.GUI.childForms.Tmp.FindCourse.ListData.resources

@@ -154,8 +154,22 @@ namespace LanguageCenter.GUI.childForms
 
         private void btnEditCourse_Click(object sender, EventArgs e)
         {
-            Form childForm = new childForms.Tmp.InputID_EditCourse();
+            Form childForm = new childForms.Tmp.InputID_EditCourses();
             childForm.ShowDialog();
+        }
+
+        private void btnDeleteCourse_Click(object sender, EventArgs e)
+        {
+            Form childForm = new childForms.Tmp.InputID_DeleteCourse();
+            childForm.ShowDialog();
+        }
+
+        private void btnFindCourse_Click(object sender, EventArgs e)
+        {
+            Form childForm = new childForms.Tmp.InputID_FindCourse();
+            childForm.ShowDialog();
+
+            
         }
     }
 }

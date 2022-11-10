@@ -5,22 +5,20 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LanguageCenter.GUI.childForms.Tmp
 {
-    public partial class InputID_EditCourse : Form
+    public partial class InputID_EditCourses : Form
     {
-        public InputID_EditCourse()
+        public InputID_EditCourses()
         {
             InitializeComponent();
-
         }
 
-        private void InputID_EditCourse_Load(object sender, EventArgs e)
+        private void InputID_EditCourses_Load(object sender, EventArgs e)
         {
 
         }
@@ -29,14 +27,14 @@ namespace LanguageCenter.GUI.childForms.Tmp
         {
             try
             {
-                Id_To_Edit = int.Parse(tbxID.Text.ToString());
+                Id_To_Edit = int.Parse(tbxIdEdit.Text.ToString());
             }
             catch
             {
                 MessageBox.Show("Bạn đã nhập sai định dạng dữ liệu! Mời nhập lại");
                 return;
             }
-            
+
             string query = "declare @check int; set @check = 0 select @check = ID from Courses where id = @id select @check";
             SqlConnection conn = DAL.DataAccess.getConnection();
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -53,12 +51,7 @@ namespace LanguageCenter.GUI.childForms.Tmp
             childForm.ShowDialog();
         }
 
-        private void tbxID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

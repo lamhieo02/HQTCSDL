@@ -71,7 +71,7 @@ namespace LanguageCenter.GUI.childForms
             }
 
             bool checkIsActive = false;
-            if (Application.OpenForms.OfType<Tmp.InputID_EditCourse>().Any())
+            if (Application.OpenForms.OfType<Tmp.InputID_EditCourses>().Any())
                 //MessageBox.Show("Form is opened");
                 checkIsActive = true;
 

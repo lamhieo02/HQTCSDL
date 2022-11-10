@@ -30,14 +30,16 @@ namespace LanguageCenter.GUI.childForms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditCourse = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
             this.btnListCourse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnEditCourse = new System.Windows.Forms.Button();
+            this.btnDeleteCourse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnFindCourse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -45,6 +47,8 @@ namespace LanguageCenter.GUI.childForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnFindCourse);
+            this.panel1.Controls.Add(this.btnDeleteCourse);
             this.panel1.Controls.Add(this.btnEditCourse);
             this.panel1.Controls.Add(this.btnAddCourse);
             this.panel1.Controls.Add(this.btnListCourse);
@@ -59,11 +63,21 @@ namespace LanguageCenter.GUI.childForms
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnEditCourse
+            // 
+            this.btnEditCourse.Location = new System.Drawing.Point(186, 72);
+            this.btnEditCourse.Name = "btnEditCourse";
+            this.btnEditCourse.Size = new System.Drawing.Size(171, 45);
+            this.btnEditCourse.TabIndex = 7;
+            this.btnEditCourse.Text = "Sửa Thông Tin Khóa Học";
+            this.btnEditCourse.UseVisualStyleBackColor = true;
+            this.btnEditCourse.Click += new System.EventHandler(this.btnEditCourse_Click);
+            // 
             // btnAddCourse
             // 
             this.btnAddCourse.Location = new System.Drawing.Point(20, 72);
             this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.Size = new System.Drawing.Size(126, 34);
+            this.btnAddCourse.Size = new System.Drawing.Size(126, 45);
             this.btnAddCourse.TabIndex = 6;
             this.btnAddCourse.Text = "Thêm Khóa Học";
             this.btnAddCourse.UseVisualStyleBackColor = true;
@@ -89,14 +103,6 @@ namespace LanguageCenter.GUI.childForms
             this.label2.TabIndex = 4;
             this.label2.Text = "Quản lí môn học";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.Image = global::LanguageCenter.Properties.Resources.plus;
-            this.label1.Location = new System.Drawing.Point(953, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 48);
-            this.label1.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -133,15 +139,33 @@ namespace LanguageCenter.GUI.childForms
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // btnEditCourse
+            // btnDeleteCourse
             // 
-            this.btnEditCourse.Location = new System.Drawing.Point(186, 72);
-            this.btnEditCourse.Name = "btnEditCourse";
-            this.btnEditCourse.Size = new System.Drawing.Size(171, 34);
-            this.btnEditCourse.TabIndex = 7;
-            this.btnEditCourse.Text = "Sửa Thông Tin Khóa Học";
-            this.btnEditCourse.UseVisualStyleBackColor = true;
-            this.btnEditCourse.Click += new System.EventHandler(this.btnEditCourse_Click);
+            this.btnDeleteCourse.Location = new System.Drawing.Point(397, 72);
+            this.btnDeleteCourse.Name = "btnDeleteCourse";
+            this.btnDeleteCourse.Size = new System.Drawing.Size(126, 45);
+            this.btnDeleteCourse.TabIndex = 8;
+            this.btnDeleteCourse.Text = "Xóa khóa học";
+            this.btnDeleteCourse.UseVisualStyleBackColor = true;
+            this.btnDeleteCourse.Click += new System.EventHandler(this.btnDeleteCourse_Click);
+            // 
+            // label1
+            // 
+            this.label1.Image = global::LanguageCenter.Properties.Resources.plus;
+            this.label1.Location = new System.Drawing.Point(953, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 48);
+            this.label1.TabIndex = 1;
+            // 
+            // btnFindCourse
+            // 
+            this.btnFindCourse.Location = new System.Drawing.Point(582, 72);
+            this.btnFindCourse.Name = "btnFindCourse";
+            this.btnFindCourse.Size = new System.Drawing.Size(126, 45);
+            this.btnFindCourse.TabIndex = 9;
+            this.btnFindCourse.Text = "Tìm khóa học";
+            this.btnFindCourse.UseVisualStyleBackColor = true;
+            this.btnFindCourse.Click += new System.EventHandler(this.btnFindCourse_Click);
             // 
             // CourseManage
             // 
@@ -173,5 +197,7 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.Button btnListCourse;
         private System.Windows.Forms.Button btnAddCourse;
         private System.Windows.Forms.Button btnEditCourse;
+        private System.Windows.Forms.Button btnDeleteCourse;
+        private System.Windows.Forms.Button btnFindCourse;
     }
 }

@@ -364,7 +364,7 @@ go
 --_ tìm kiếm các khóa học dựa vào id ngôn ngữ
 CREATE PROCEDURE TIMKIEM_KHOAHOC_LanguageID @id_nn int
 as
-select Courses.Lessons, Courses.Description, Courses.Term, Courses.Level_ID, Courses.Category_ID
+select Courses.ID, Courses.Lessons, Courses.Description, Courses.Term, Courses.Language_ID,Courses.Level_ID, Courses.Category_ID
 from Courses where language_id=@id_nn;
 
 --drop procedure TIMKIEM_KHOAHOC_LanguageID
