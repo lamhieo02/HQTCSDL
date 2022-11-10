@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LanguageCenter.GUI.childForms.Tmp;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +15,34 @@ namespace LanguageCenter.GUI.childForms
 {
     public partial class CourseInfo : Form
     {
+        public int Id_To_Edit = 0;
+        public CourseInfo(int _Id_To_Edit)
+        {
+            this.Id_To_Edit = _Id_To_Edit;
+            InitializeComponent();
+        }
         public CourseInfo()
         {
             InitializeComponent();
         }
 
+
+        public void AddParameter(SqlCommand cmd, int lesson, string description, string term, int languageId, int levelId, int categoryId)
+        {
+            cmd.Parameters.Add("@lesson", SqlDbType.Int);
+            cmd.Parameters.Add("@desc", SqlDbType.NVarChar);
+            cmd.Parameters.Add("@term", SqlDbType.NVarChar);
+            cmd.Parameters.Add("@languageId", SqlDbType.Int);
+            cmd.Parameters.Add("@levelId", SqlDbType.Int);
+            cmd.Parameters.Add("@categoryId", SqlDbType.Int);
+
+            cmd.Parameters["@lesson"].Value = lesson;
+            cmd.Parameters["@desc"].Value = description;
+            cmd.Parameters["@term"].Value = term;
+            cmd.Parameters["@languageId"].Value = languageId;
+            cmd.Parameters["@levelId"].Value = levelId;
+            cmd.Parameters["@categoryId"].Value = categoryId;
+        }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             int lesson;
@@ -45,30 +70,42 @@ namespace LanguageCenter.GUI.childForms
                 return;
             }
 
-            // Add Course to Database
-            string query = "insert into Courses values (@lesson, @desc, @term, @languageId, @levelId, @categoryId)";
+            bool checkIsActive = false;
+            if (Application.OpenForms.OfType<Tmp.InputID_EditCourse>().Any())
+                //MessageBox.Show("Form is opened");
+                checkIsActive = true;
+
             SqlConnection conn = DAL.DataAccess.getConnection();
-            SqlCommand cmd = new SqlCommand(query, conn);
+
+            if (checkIsActive)
+            {
+                // Edit Course to Database
+                string query = "update Courses Set Lessons = @lesson, Description = @desc, Term = @term, Language_ID =  @languageId, Level_ID = @levelId, Category_ID = @categoryId where ID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.Add("@id", SqlDbType.Int);
+                cmd.Parameters["@id"].Value = Id_To_Edit;
+
+                AddParameter(cmd, lesson, description, term, languageId, levelId, categoryId);
+                cmd.ExecuteReader();
+
+                MessageBox.Show("Đã sửa thông tin của khóa học thành công");
+            }
+            else
+            {
+                // Add Course to Database
+                string query = "insert into Courses values (@lesson, @desc, @term, @languageId, @levelId, @categoryId)";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
 
 
-            cmd.Parameters.Add("@lesson", SqlDbType.Int);
-            cmd.Parameters.Add("@desc", SqlDbType.NVarChar);
-            cmd.Parameters.Add("@term", SqlDbType.NVarChar);
-            cmd.Parameters.Add("@languageId", SqlDbType.Int);
-            cmd.Parameters.Add("@levelId", SqlDbType.Int);
-            cmd.Parameters.Add("@categoryId", SqlDbType.Int);
+                AddParameter(cmd, lesson, description, term, languageId, levelId, categoryId);
 
+                cmd.ExecuteReader();
 
-            cmd.Parameters["@lesson"].Value = lesson;
-            cmd.Parameters["@desc"].Value = description;
-            cmd.Parameters["@term"].Value = term;
-            cmd.Parameters["@languageId"].Value = languageId;
-            cmd.Parameters["@levelId"].Value = levelId;
-            cmd.Parameters["@categoryId"].Value = categoryId;
+                MessageBox.Show("Đã thêm course thành công");
 
-            cmd.ExecuteReader();
-
-            MessageBox.Show("Đã thêm course thành công");
+            }
             conn.Close();
             this.Close();
         }

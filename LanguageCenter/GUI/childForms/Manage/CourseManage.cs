@@ -14,6 +14,7 @@ namespace LanguageCenter.GUI.childForms
 {
     public partial class CourseManage : Form
     {
+
         public CourseManage()
         {
             InitializeComponent();
@@ -144,6 +145,17 @@ namespace LanguageCenter.GUI.childForms
             Form childForm = new childForms.CourseInfo();
             childForm.ShowDialog();
             //this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnEditCourse_Click(object sender, EventArgs e)
+        {
+            Form childForm = new childForms.Tmp.InputID_EditCourse();
+            childForm.ShowDialog();
         }
     }
 }

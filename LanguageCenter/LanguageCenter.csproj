@@ -163,6 +163,12 @@
     <Compile Include="GUI\childForms\Student_Score.Designer.cs">
       <DependentUpon>Student_Score.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\childForms\Tmp\InputID_EditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\childForms\Tmp\InputID_EditCourse.Designer.cs">
+      <DependentUpon>InputID_EditCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\mainForms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\childForms\Student_Score.resx">
       <DependentUpon>Student_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\childForms\Tmp\InputID_EditCourse.resx">
+      <DependentUpon>InputID_EditCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\mainForms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
