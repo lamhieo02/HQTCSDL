@@ -11,8 +11,7 @@ namespace LanguageCenter.DTO
         public int ID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int Is_Active { get; set; }
-        public int roleID { get; set; }
+        public int RoleID { get; set; }
         public Account()
         {
 

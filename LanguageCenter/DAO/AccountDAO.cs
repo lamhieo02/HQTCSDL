@@ -32,8 +32,7 @@ namespace LanguageCenter.DAO
                 account.ID = Convert.ToInt32(reader["ID"]);
                 account.Username = Convert.ToString(reader["Username"]);
                 account.Password = Convert.ToString(reader["Password"]);
-                account.Is_Active = Convert.ToInt32(reader["Is_Active"]);
-                account.roleID = Convert.ToInt32(reader["roleID"]);
+                account.roleID = Convert.ToInt32(reader["RoleID"]);
 
                 return account;
             }
@@ -56,7 +55,7 @@ namespace LanguageCenter.DAO
                 {
                     return -1;
                 }
-                role = Convert.ToInt32(reader["roleID"]);
+                role = Convert.ToInt32(reader["RoleID"]);
                 return role;
             }
         }
