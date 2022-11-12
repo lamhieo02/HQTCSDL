@@ -30,13 +30,11 @@ namespace LanguageCenter.DAO
                     return null;
                 }
                 Staff st = new Staff();
-                st.ID = Convert.ToInt32(reader["ID"]);
                 st.Username = Convert.ToString(reader["Username"]);
                 st.Position = Convert.ToString(reader["Position"]);
                 st.Date_Birth = Convert.ToString(reader["Date_Birth"]);
                 st.Address = Convert.ToString(reader["Address"]);
-                st.First_Name = Convert.ToString(reader["First_Name"]);
-                st.Last_Name = Convert.ToString(reader["Last_Name"]);
+                st.Name = Convert.ToString(reader["Name"]);
                 st.Email = Convert.ToString(reader["Email"]);
                 st.Phone = Convert.ToString(reader["Phone"]);
 

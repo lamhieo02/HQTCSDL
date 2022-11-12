@@ -30,12 +30,10 @@ namespace LanguageCenter.DAO
                     return null;
                 }
                 Teacher teacher = new Teacher();
-                teacher.ID = Convert.ToInt32(reader["ID"]);
                 teacher.Username = Convert.ToString(reader["Username"]);
                 teacher.Date_Birth = Convert.ToString(reader["Date_Birth"]);
                 teacher.Address = Convert.ToString(reader["Address"]);
-                teacher.First_Name = Convert.ToString(reader["First_Name"]);
-                teacher.Last_Name = Convert.ToString(reader["Last_Name"]);
+                teacher.Name = Convert.ToString(reader["Name"]);
                 teacher.Email = Convert.ToString(reader["Email"]);
                 teacher.Phone = Convert.ToString(reader["Phone"]);
 
