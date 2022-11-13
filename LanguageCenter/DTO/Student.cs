@@ -9,6 +9,7 @@ namespace LanguageCenter.DTO
     class Student
     {
         public string Username { get; set; }
+        public string Password { get; set; }
         public string Date_Birth { get; set; }
         public string Address { get; set; }
         public string Name { get; set; }

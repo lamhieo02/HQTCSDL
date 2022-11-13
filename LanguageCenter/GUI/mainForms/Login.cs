@@ -67,11 +67,11 @@ namespace LanguageCenter.GUI.mainForms
                     }
                     if (role == 3)
                     {
-                        LoginStudent();
+                        LoginTeacher();
                     }
                     if (role == 4)
                     {
-                        LoginTeacher();
+                        LoginStudent();
                     }
                 }
             }
@@ -89,13 +89,12 @@ namespace LanguageCenter.GUI.mainForms
             StaffDAO staff_dao = new StaffDAO();
             Staff staff = staff_dao.getStaffByUsername(username);
             Admin_HomePage staffForm = new Admin_HomePage();
-            staffForm.ID = staff.ID;
             staffForm.Username = staff.Username;
+            staffForm.Password = staff.Password;
             staffForm.Position = staff.Position;
             staffForm.Address = staff.Address;
             staffForm.Date_Birth = staff.Date_Birth;
-            staffForm.First_Name = staff.First_Name;
-            staffForm.Last_Name = staff.Last_Name;
+            staffForm.Name = staff.Name;
             staffForm.Email = staff.Email;
             staffForm.Phone = staff.Phone;
 
@@ -109,15 +108,14 @@ namespace LanguageCenter.GUI.mainForms
             StaffDAO staff_dao = new StaffDAO();
             Staff staff = staff_dao.getStaffByUsername(username);
             Staff_HomePage staffForm = new Staff_HomePage();
-            staffForm.ID = staff.ID;
-            staffForm.Position = staff.Position;
             staffForm.Username = staff.Username;
+            staffForm.Password = staff.Password;
             staffForm.Address = staff.Address;
             staffForm.Date_Birth = staff.Date_Birth;
-            staffForm.First_Name = staff.First_Name;
-            staffForm.Last_Name = staff.Last_Name;
+            staffForm.Name = staff.Name;
             staffForm.Email = staff.Email;
             staffForm.Phone = staff.Phone;
+            staffForm.Position = staff.Position;
 
             this.Hide();
             staffForm.ShowDialog();
@@ -129,12 +127,10 @@ namespace LanguageCenter.GUI.mainForms
             StudentDAO student_dao = new StudentDAO();
             Student student = student_dao.getStudentByUsername(username);
             Student_HomePage studentForm = new Student_HomePage();
-            studentForm.ID = student.ID;
             studentForm.Username = student.Username;
             studentForm.Address = student.Address;
             studentForm.Date_Birth = student.Date_Birth;
-            studentForm.First_Name = student.First_Name;
-            studentForm.Last_Name = student.Last_Name;
+            studentForm.Name = student.Name;
             studentForm.Email = student.Email;
             studentForm.Phone = student.Phone;
 
@@ -148,12 +144,10 @@ namespace LanguageCenter.GUI.mainForms
             TeacherDAO teacher_dao = new TeacherDAO();
             Teacher teacher = teacher_dao.getTeacherByUsername(username);
             Teacher_HomePage teacherForm = new Teacher_HomePage();
-            teacherForm.ID = teacher.ID;
             teacherForm.Username = teacher.Username;
             teacherForm.Address = teacher.Address;
             teacherForm.Date_Birth = teacher.Date_Birth;
-            teacherForm.First_Name = teacher.First_Name;
-            teacherForm.Last_Name = teacher.Last_Name;
+            teacherForm.Name = teacher.Name;
             teacherForm.Email = teacher.Email;
             teacherForm.Phone = teacher.Phone;
 

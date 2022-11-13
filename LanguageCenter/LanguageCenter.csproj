@@ -61,59 +61,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\childForms\Info\ClassInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\ClassInfo.Designer.cs">
-      <DependentUpon>ClassInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\CourseInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\CourseInfo.Designer.cs">
-      <DependentUpon>CourseInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Manage\ClassManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Manage\ClassManage.Designer.cs">
-      <DependentUpon>ClassManage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Manage\SalaryManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Manage\SalaryManage.Designer.cs">
-      <DependentUpon>SalaryManage.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\childForms\Manage\StaffManage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\childForms\Manage\StaffManage.Designer.cs">
       <DependentUpon>StaffManage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\StaffInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\StaffInfo.Designer.cs">
-      <DependentUpon>StaffInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\TeacherInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\TeacherInfo.Designer.cs">
-      <DependentUpon>TeacherInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\StudentInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Info\StudentInfo.Designer.cs">
-      <DependentUpon>StudentInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Manage\CourseManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Manage\CourseManage.Designer.cs">
-      <DependentUpon>CourseManage.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\childForms\Manage\PaymentManage.cs">
       <SubType>Form</SubType>
@@ -121,11 +73,41 @@
     <Compile Include="GUI\childForms\Manage\PaymentManage.Designer.cs">
       <DependentUpon>PaymentManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\childForms\Manage\TeacherManage.cs">
+    <Compile Include="GUI\Views\LichSuGiaoDich.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\childForms\Manage\TeacherManage.Designer.cs">
-      <DependentUpon>TeacherManage.cs</DependentUpon>
+    <Compile Include="GUI\Views\LichSuGiaoDich.Designer.cs">
+      <DependentUpon>LichSuGiaoDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Views\Staff_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Views\Staff_Profile.Designer.cs">
+      <DependentUpon>Staff_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Views\TeacherSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Views\TeacherSchedule.Designer.cs">
+      <DependentUpon>TeacherSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Views\TeacherClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Views\TeacherClass.Designer.cs">
+      <DependentUpon>TeacherClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Views\AllClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Views\AllClass.Designer.cs">
+      <DependentUpon>AllClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Views\StudentSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Views\StudentSchedule.Designer.cs">
+      <DependentUpon>StudentSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\childForms\Manage\StudentManage.cs">
       <SubType>Form</SubType>
@@ -133,35 +115,38 @@
     <Compile Include="GUI\childForms\Manage\StudentManage.Designer.cs">
       <DependentUpon>StudentManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\childForms\Profile.cs">
+    <Compile Include="GUI\childForms\Manage\TeacherManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\childForms\Profile.Designer.cs">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <Compile Include="GUI\childForms\Manage\TeacherManage.Designer.cs">
+      <DependentUpon>TeacherManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\childForms\Teacher_Profile.cs">
+    <Compile Include="GUI\childForms\Manage\CourseManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\childForms\Teacher_Profile.Designer.cs">
+    <Compile Include="GUI\childForms\Manage\CourseManage.Designer.cs">
+      <DependentUpon>CourseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\childForms\Manage\ClassManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\childForms\Manage\ClassManage.Designer.cs">
+      <DependentUpon>ClassManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Views\Teacher_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Views\Teacher_Profile.Designer.cs">
       <DependentUpon>Teacher_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\childForms\Student_Profile.cs">
+    <Compile Include="GUI\Views\Student_Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\childForms\Student_Profile.Designer.cs">
+    <Compile Include="GUI\Views\Student_Profile.Designer.cs">
       <DependentUpon>Student_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\childForms\Student_Schedule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Student_Schedule.Designer.cs">
-      <DependentUpon>Student_Schedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\childForms\Student_Score.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\childForms\Student_Score.Designer.cs">
-      <DependentUpon>Student_Score.cs</DependentUpon>
+    <Compile Include="GUI\Components\RoundedButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="GUI\mainForms\ChangePassword.cs">
       <SubType>Form</SubType>
@@ -204,56 +189,47 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Info\ClassInfo.resx">
-      <DependentUpon>ClassInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Info\CourseInfo.resx">
-      <DependentUpon>CourseInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Manage\ClassManage.resx">
-      <DependentUpon>ClassManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Manage\SalaryManage.resx">
-      <DependentUpon>SalaryManage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\childForms\Manage\StaffManage.resx">
       <DependentUpon>StaffManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Info\StaffInfo.resx">
-      <DependentUpon>StaffInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Info\TeacherInfo.resx">
-      <DependentUpon>TeacherInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Info\StudentInfo.resx">
-      <DependentUpon>StudentInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Manage\CourseManage.resx">
-      <DependentUpon>CourseManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\childForms\Manage\PaymentManage.resx">
       <DependentUpon>PaymentManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Manage\TeacherManage.resx">
-      <DependentUpon>TeacherManage.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Views\LichSuGiaoDich.resx">
+      <DependentUpon>LichSuGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Views\Staff_Profile.resx">
+      <DependentUpon>Staff_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Views\TeacherSchedule.resx">
+      <DependentUpon>TeacherSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Views\TeacherClass.resx">
+      <DependentUpon>TeacherClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Views\AllClass.resx">
+      <DependentUpon>AllClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Views\StudentSchedule.resx">
+      <DependentUpon>StudentSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\childForms\Manage\StudentManage.resx">
       <DependentUpon>StudentManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Profile.resx">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\childForms\Manage\TeacherManage.resx">
+      <DependentUpon>TeacherManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Teacher_Profile.resx">
+    <EmbeddedResource Include="GUI\childForms\Manage\CourseManage.resx">
+      <DependentUpon>CourseManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\childForms\Manage\ClassManage.resx">
+      <DependentUpon>ClassManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Views\Teacher_Profile.resx">
       <DependentUpon>Teacher_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Student_Profile.resx">
+    <EmbeddedResource Include="GUI\Views\Student_Profile.resx">
       <DependentUpon>Student_Profile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Student_Schedule.resx">
-      <DependentUpon>Student_Schedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\childForms\Student_Score.resx">
-      <DependentUpon>Student_Score.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\mainForms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
@@ -383,6 +359,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

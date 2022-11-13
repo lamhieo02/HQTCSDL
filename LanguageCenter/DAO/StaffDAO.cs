@@ -19,7 +19,7 @@ namespace LanguageCenter.DAO
             var conn = DAL.DataAccess.getConnection();
             var command = conn.CreateCommand();
 
-            command.CommandText = "select * from Staffs where Staffs.Username = @username";
+            command.CommandText = "select * from Staff where Staff.Username = @username";
             command.Parameters.Add(new SqlParameter("@username", username));
 
             SqlDataReader reader = command.ExecuteReader();

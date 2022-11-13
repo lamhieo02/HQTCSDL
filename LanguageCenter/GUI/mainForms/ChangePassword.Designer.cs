@@ -34,11 +34,11 @@ namespace LanguageCenter.GUI.mainForms
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.loginBtn = new System.Windows.Forms.Button();
+            this.txtPassword1 = new System.Windows.Forms.TextBox();
+            this.changePasswordBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -87,6 +87,7 @@ namespace LanguageCenter.GUI.mainForms
             this.txtUsername.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(33, 80);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(409, 36);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
@@ -102,36 +103,37 @@ namespace LanguageCenter.GUI.mainForms
             this.label3.TabIndex = 4;
             this.label3.Text = "Password mới";
             // 
-            // txtPassword
+            // txtPassword1
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(33, 187);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(409, 36);
-            this.txtPassword.TabIndex = 5;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
+            this.txtPassword1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword1.Location = new System.Drawing.Point(33, 187);
+            this.txtPassword1.Name = "txtPassword1";
+            this.txtPassword1.Size = new System.Drawing.Size(409, 36);
+            this.txtPassword1.TabIndex = 5;
+            this.txtPassword1.UseSystemPasswordChar = true;
+            this.txtPassword1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
             // 
-            // loginBtn
+            // changePasswordBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.Lavender;
-            this.loginBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.loginBtn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.loginBtn.Location = new System.Drawing.Point(225, 374);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(217, 66);
-            this.loginBtn.TabIndex = 6;
-            this.loginBtn.Text = "Đổi mật khẩu";
-            this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.changePasswordBtn.BackColor = System.Drawing.Color.Lavender;
+            this.changePasswordBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.changePasswordBtn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.changePasswordBtn.Location = new System.Drawing.Point(225, 374);
+            this.changePasswordBtn.Name = "changePasswordBtn";
+            this.changePasswordBtn.Size = new System.Drawing.Size(217, 66);
+            this.changePasswordBtn.TabIndex = 6;
+            this.changePasswordBtn.Text = "Đổi mật khẩu";
+            this.changePasswordBtn.UseVisualStyleBackColor = false;
+            this.changePasswordBtn.Click += new System.EventHandler(this.changePasswordBtn_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtPassword2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtUsername);
-            this.panel3.Controls.Add(this.txtPassword);
-            this.panel3.Controls.Add(this.loginBtn);
+            this.panel3.Controls.Add(this.txtPassword1);
+            this.panel3.Controls.Add(this.changePasswordBtn);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(550, 85);
@@ -150,13 +152,15 @@ namespace LanguageCenter.GUI.mainForms
             this.label4.TabIndex = 7;
             this.label4.Text = "Nhập lại Password:";
             // 
-            // textBox1
+            // txtPassword2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(38, 293);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(409, 36);
-            this.textBox1.TabIndex = 8;
+            this.txtPassword2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword2.Location = new System.Drawing.Point(38, 293);
+            this.txtPassword2.Name = "txtPassword2";
+            this.txtPassword2.Size = new System.Drawing.Size(409, 36);
+            this.txtPassword2.TabIndex = 8;
+            this.txtPassword2.UseSystemPasswordChar = true;
+            this.txtPassword2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
             // 
             // panel2
             // 
@@ -192,7 +196,7 @@ namespace LanguageCenter.GUI.mainForms
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change password";
-            this.Load += new System.EventHandler(this.Login_Load);
+            this.Load += new System.EventHandler(this.ChangePassword_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -210,12 +214,12 @@ namespace LanguageCenter.GUI.mainForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.TextBox txtPassword1;
+        private System.Windows.Forms.Button changePasswordBtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword2;
     }
 }

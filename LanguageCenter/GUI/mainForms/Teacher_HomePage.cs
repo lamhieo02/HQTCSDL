@@ -16,10 +16,10 @@ namespace LanguageCenter.GUI
         private Form activeForm;
         public int ID { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
         public string Address { get; set; }
         public string Date_Birth { get; set; }
-        public string First_Name { get; set; }
-        public string Last_Name { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public Teacher_HomePage()
@@ -28,7 +28,7 @@ namespace LanguageCenter.GUI
         }
         private void Teacher_HomePage_Load(object sender, EventArgs e)
         {
-            txtName.Text = "          " + Last_Name + " " + First_Name;
+            txtName.Text = "          " + Name;
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
@@ -63,28 +63,10 @@ namespace LanguageCenter.GUI
             profile.Username = Username;
             profile.Address = Address;
             profile.Date_Birth = Date_Birth;
-            profile.First_Name = First_Name;
-            profile.Last_Name = Last_Name;
+            profile.Name = Name;
             profile.Email = Email;
             profile.Phone = Phone;
             OpenChildForm(profile, sender);
-        }
-
-        private void scheduleBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_Schedule(), sender);
-        }
-
-        private void scoreBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_Score(), sender);
-        }
-
-        private void changePwBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var changePw = new ChangePassword();
-            changePw.ShowDialog();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -92,6 +74,27 @@ namespace LanguageCenter.GUI
             this.Hide();
             var loginForm = new Login();
             loginForm.ShowDialog();
+        }
+        private void ScheduleViewBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.TeacherSchedule(), sender);
+        }
+
+        private void changePwBtn_Click(object sender, EventArgs e)
+        {
+            var changePw = new ChangePassword();
+            changePw.Username = Username;
+            changePw.ShowDialog();
+        }
+
+        private void teacherClassBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.TeacherClass(), sender);
+        }
+
+        private void AllClassBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.AllClass(), sender);
         }
     }
 }

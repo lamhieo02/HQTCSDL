@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace LanguageCenter.GUI.childForms
 {
-    public partial class TeacherManage : Form
+    public partial class AllClass : Form
     {
-        public TeacherManage()
+        public AllClass()
         {
             InitializeComponent();
         }
 
         private void ClassManage_Load(object sender, EventArgs e)
         {
-            teacherGridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            teacherGridview.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            AllClass_Gridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            AllClass_Gridview.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

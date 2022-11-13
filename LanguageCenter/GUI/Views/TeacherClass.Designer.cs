@@ -1,7 +1,7 @@
 ﻿
 namespace LanguageCenter.GUI.childForms
 {
-    partial class StudentManage
+    partial class TeacherClass
     {
         /// <summary>
         /// Required designer variable.
@@ -40,32 +40,21 @@ namespace LanguageCenter.GUI.childForms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.studentGridview = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.DeleteBtn = new LanguageCenter.GUI.Components.RoundedButton();
-            this.UpdateBtn = new LanguageCenter.GUI.Components.RoundedButton();
-            this.AddBtn = new LanguageCenter.GUI.Components.RoundedButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridview)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,9 +86,9 @@ namespace LanguageCenter.GUI.childForms
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(19, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 24);
+            this.label2.Size = new System.Drawing.Size(162, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Quản lí học viên";
+            this.label2.Text = "Lớp học của tôi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // comboBox1
@@ -136,9 +125,6 @@ namespace LanguageCenter.GUI.childForms
             // 
             // studentGridview
             // 
-            this.studentGridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.studentGridview.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -155,7 +141,12 @@ namespace LanguageCenter.GUI.childForms
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,7 +155,8 @@ namespace LanguageCenter.GUI.childForms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.studentGridview.DefaultCellStyle = dataGridViewCellStyle2;
-            this.studentGridview.Location = new System.Drawing.Point(0, 108);
+            this.studentGridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentGridview.Location = new System.Drawing.Point(0, 110);
             this.studentGridview.Name = "studentGridview";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -180,228 +172,95 @@ namespace LanguageCenter.GUI.childForms
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentGridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.studentGridview.RowTemplate.Height = 28;
-            this.studentGridview.Size = new System.Drawing.Size(1327, 641);
+            this.studentGridview.Size = new System.Drawing.Size(1327, 639);
             this.studentGridview.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 739);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1327, 10);
+            this.panel2.TabIndex = 4;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Username";
+            this.Column1.HeaderText = "Mã lớp";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Họ tên";
+            this.Column2.HeaderText = "Tên lớp";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Ngày sinh";
+            this.Column3.HeaderText = "Mã khóa học";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Địa chỉ";
+            this.Column4.HeaderText = "Tên khóa học";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Email";
+            this.Column5.HeaderText = "Mã học viên";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Số điện thoại";
+            this.Column6.HeaderText = "Tên học viên";
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             // 
-            // panel2
+            // Column7
             // 
-            this.panel2.Controls.Add(this.DeleteBtn);
-            this.panel2.Controls.Add(this.UpdateBtn);
-            this.panel2.Controls.Add(this.AddBtn);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 472);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1327, 277);
-            this.panel2.TabIndex = 4;
+            this.Column7.HeaderText = "Username";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
             // 
-            // DeleteBtn
+            // Column8
             // 
-            this.DeleteBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteBtn.FlatAppearance.BorderSize = 0;
-            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(1072, 179);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(157, 63);
-            this.DeleteBtn.TabIndex = 28;
-            this.DeleteBtn.Text = "Xóa";
-            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.Column8.HeaderText = "Ngày sinh";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
             // 
-            // UpdateBtn
+            // Column9
             // 
-            this.UpdateBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdateBtn.FlatAppearance.BorderSize = 0;
-            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(1072, 102);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(157, 63);
-            this.UpdateBtn.TabIndex = 27;
-            this.UpdateBtn.Text = "Sửa";
-            this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.Column9.HeaderText = "Địa chỉ";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 150;
             // 
-            // AddBtn
+            // Column10
             // 
-            this.AddBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddBtn.FlatAppearance.BorderSize = 0;
-            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(1072, 26);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(157, 63);
-            this.AddBtn.TabIndex = 27;
-            this.AddBtn.Text = "Thêm";
-            this.AddBtn.UseVisualStyleBackColor = false;
+            this.Column10.HeaderText = "Email";
+            this.Column10.MinimumWidth = 8;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 150;
             // 
-            // textBox7
+            // Column11
             // 
-            this.textBox7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox7.Location = new System.Drawing.Point(696, 165);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(304, 32);
-            this.textBox7.TabIndex = 19;
+            this.Column11.HeaderText = "Số điện thoại";
+            this.Column11.MinimumWidth = 8;
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 150;
             // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox8.Location = new System.Drawing.Point(696, 119);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(304, 32);
-            this.textBox8.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(552, 168);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 24);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Số điện thoại:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(552, 122);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 24);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Ngày sinh:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox9.Location = new System.Drawing.Point(696, 73);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(304, 32);
-            this.textBox9.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(552, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 24);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Email:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox4.Location = new System.Drawing.Point(188, 165);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(304, 32);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox3.Location = new System.Drawing.Point(188, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 32);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Địa chỉ:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Họ tên:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox2.Location = new System.Drawing.Point(188, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(304, 32);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
-            // 
-            // StudentManage
+            // TeacherClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -410,15 +269,13 @@ namespace LanguageCenter.GUI.childForms
             this.Controls.Add(this.studentGridview);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "StudentManage";
-            this.Text = "Student Manage";
+            this.Name = "TeacherClass";
+            this.Text = "My Class";
             this.Load += new System.EventHandler(this.ClassManage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridview)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -431,28 +288,18 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.DataGridView studentGridview;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
-        private Components.RoundedButton DeleteBtn;
-        private Components.RoundedButton UpdateBtn;
-        private Components.RoundedButton AddBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

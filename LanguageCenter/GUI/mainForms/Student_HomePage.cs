@@ -17,6 +17,7 @@ namespace LanguageCenter.GUI
         private Form activeForm;
         public int ID { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
         public string Address { get; set; }
         public string Date_Birth { get; set; }
         public string First_Name { get; set; }
@@ -30,7 +31,7 @@ namespace LanguageCenter.GUI
         }
         private void Student_HomePage_Load(object sender, EventArgs e)
         {
-            txtName.Text = "          " + Last_Name + " " + First_Name;
+            txtName.Text = "          " + Name;
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
@@ -65,8 +66,7 @@ namespace LanguageCenter.GUI
             profile.Username = Username;
             profile.Address = Address;
             profile.Date_Birth = Date_Birth;
-            profile.First_Name = First_Name;
-            profile.Last_Name = Last_Name;
+            profile.Name = Name;
             profile.Email = Email;
             profile.Phone = Phone;
             OpenChildForm(profile, sender);
@@ -74,17 +74,14 @@ namespace LanguageCenter.GUI
 
         private void scheduleBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new childForms.Student_Schedule(), sender);
+            OpenChildForm(new childForms.StudentSchedule(), sender);
         }
 
-        private void scoreBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.Student_Score(), sender);
-        }
 
         private void changePwBtn_Click(object sender, EventArgs e)
         {
             var changePw = new ChangePassword();
+            changePw.Username = Username;
             changePw.ShowDialog();
         }
 
@@ -95,6 +92,9 @@ namespace LanguageCenter.GUI
             loginForm.ShowDialog();
         }
 
-       
+        private void LichsugiaodichBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.LichSuGiaoDich(), sender);
+        }
     }
 }

@@ -29,10 +29,9 @@ namespace LanguageCenter.DAO
                     return null;
                 }
                 Account account = new Account();
-                account.ID = Convert.ToInt32(reader["ID"]);
                 account.Username = Convert.ToString(reader["Username"]);
                 account.Password = Convert.ToString(reader["Password"]);
-                account.roleID = Convert.ToInt32(reader["RoleID"]);
+                account.RoleID = Convert.ToInt32(reader["RoleID"]);
 
                 return account;
             }
@@ -45,7 +44,7 @@ namespace LanguageCenter.DAO
             var conn = DAL.DataAccess.getConnection();
             var command = conn.CreateCommand();
 
-            command.CommandText = "select Accounts.roleID from Accounts where Accounts.Username = @username";
+            command.CommandText = "select Accounts.RoleID from Accounts where Accounts.Username = @username";
             command.Parameters.Add(new SqlParameter("@username", username));
 
             SqlDataReader reader = command.ExecuteReader();
@@ -58,6 +57,20 @@ namespace LanguageCenter.DAO
                 role = Convert.ToInt32(reader["RoleID"]);
                 return role;
             }
+        }
+
+        public void changePassword(string username, string password )
+        {
+     
+            var conn = DAL.DataAccess.getConnection();
+            var command = conn.CreateCommand();
+
+            command.CommandText = "update Accounts set Accounts.Password = @password where Accounts.Username = @username";
+            command.Parameters.Add(new SqlParameter("@username", username));
+            command.Parameters.Add(new SqlParameter("@password", password));
+
+            SqlDataReader reader = command.ExecuteReader();
+           
         }
     }
 }

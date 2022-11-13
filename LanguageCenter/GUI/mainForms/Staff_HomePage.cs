@@ -18,11 +18,11 @@ namespace LanguageCenter.GUI
         private Form activeForm;
         public int ID { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
         public string Position { get; set; }
         public string Address { get; set; }
         public string Date_Birth { get; set; }
-        public string First_Name { get; set; }
-        public string Last_Name { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public Staff_HomePage()
@@ -31,7 +31,7 @@ namespace LanguageCenter.GUI
         }
         private void Staff_HomePage_Load(object sender, EventArgs e)
         {
-            txtName.Text = "          " + Last_Name + " " + First_Name;
+            txtName.Text = "          " + Name;
 
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
@@ -68,14 +68,13 @@ namespace LanguageCenter.GUI
         }
         private void profileBtn_Click(object sender, EventArgs e)
         {
-            var profile = new childForms.Profile();
+            var profile = new childForms.Staff_Profile();
             profile.ID = ID;
             profile.Username = Username;
             profile.Position = Position;
             profile.Address = Address;
             profile.Date_Birth = Date_Birth;
-            profile.First_Name = First_Name;
-            profile.Last_Name = Last_Name;
+            profile.Name = Name;
             profile.Email = Email;
             profile.Phone = Phone;
             OpenChildForm(profile, sender);
@@ -83,6 +82,7 @@ namespace LanguageCenter.GUI
         private void changePwBtn_Click(object sender, EventArgs e)
         {
             var changePw = new ChangePassword();
+            changePw.Username = Username;
             changePw.ShowDialog();
         }
         private void studentManageBtn_Click(object sender, EventArgs e)

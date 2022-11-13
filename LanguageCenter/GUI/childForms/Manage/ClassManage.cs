@@ -16,5 +16,11 @@ namespace LanguageCenter.GUI.childForms
         {
             InitializeComponent();
         }
+
+        private void ClassManage_Load(object sender, EventArgs e)
+        {
+            classGridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            classGridview.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
     }
 }

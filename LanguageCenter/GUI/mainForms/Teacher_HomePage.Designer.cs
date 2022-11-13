@@ -33,9 +33,11 @@ namespace LanguageCenter.GUI
             this.txtName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.logoutBtn = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.changePwBtn = new System.Windows.Forms.Button();
-            this.classMnBtn = new System.Windows.Forms.Button();
+            this.ScheduleViewBtn = new System.Windows.Forms.Button();
+            this.AllClassBtn = new System.Windows.Forms.Button();
+            this.teacherClassBtn = new System.Windows.Forms.Button();
             this.profileBtn = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -92,9 +94,11 @@ namespace LanguageCenter.GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.logoutBtn);
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.changePwBtn);
-            this.panel2.Controls.Add(this.classMnBtn);
+            this.panel2.Controls.Add(this.ScheduleViewBtn);
+            this.panel2.Controls.Add(this.AllClassBtn);
+            this.panel2.Controls.Add(this.teacherClassBtn);
             this.panel2.Controls.Add(this.profileBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 86);
@@ -102,25 +106,24 @@ namespace LanguageCenter.GUI
             this.panel2.Size = new System.Drawing.Size(318, 854);
             this.panel2.TabIndex = 2;
             // 
-            // logoutBtn
+            // button4
             // 
-            this.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue;
-            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Image = global::LanguageCenter.Properties.Resources.settings;
-            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(0, 288);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.logoutBtn.Size = new System.Drawing.Size(318, 96);
-            this.logoutBtn.TabIndex = 7;
-            this.logoutBtn.Text = "         Đăng xuất";
-            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::LanguageCenter.Properties.Resources.logout1;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 480);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(318, 96);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "         Đăng xuất";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // changePwBtn
             // 
@@ -132,35 +135,75 @@ namespace LanguageCenter.GUI
             this.changePwBtn.ForeColor = System.Drawing.Color.White;
             this.changePwBtn.Image = global::LanguageCenter.Properties.Resources.settings;
             this.changePwBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.changePwBtn.Location = new System.Drawing.Point(0, 192);
+            this.changePwBtn.Location = new System.Drawing.Point(0, 384);
             this.changePwBtn.Name = "changePwBtn";
             this.changePwBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.changePwBtn.Size = new System.Drawing.Size(318, 96);
-            this.changePwBtn.TabIndex = 6;
+            this.changePwBtn.TabIndex = 10;
             this.changePwBtn.Text = "         Đổi mật khẩu";
             this.changePwBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changePwBtn.UseVisualStyleBackColor = false;
             this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
             // 
-            // classMnBtn
+            // ScheduleViewBtn
             // 
-            this.classMnBtn.BackColor = System.Drawing.Color.MidnightBlue;
-            this.classMnBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.classMnBtn.FlatAppearance.BorderSize = 0;
-            this.classMnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.classMnBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.classMnBtn.ForeColor = System.Drawing.Color.White;
-            this.classMnBtn.Image = global::LanguageCenter.Properties.Resources.schedule;
-            this.classMnBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.classMnBtn.Location = new System.Drawing.Point(0, 96);
-            this.classMnBtn.Name = "classMnBtn";
-            this.classMnBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.classMnBtn.Size = new System.Drawing.Size(318, 96);
-            this.classMnBtn.TabIndex = 1;
-            this.classMnBtn.Text = "         Quản lí lớp học";
-            this.classMnBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.classMnBtn.UseVisualStyleBackColor = false;
-            this.classMnBtn.Click += new System.EventHandler(this.scheduleBtn_Click);
+            this.ScheduleViewBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ScheduleViewBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ScheduleViewBtn.FlatAppearance.BorderSize = 0;
+            this.ScheduleViewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ScheduleViewBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.ScheduleViewBtn.ForeColor = System.Drawing.Color.White;
+            this.ScheduleViewBtn.Image = global::LanguageCenter.Properties.Resources.schedule;
+            this.ScheduleViewBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ScheduleViewBtn.Location = new System.Drawing.Point(0, 288);
+            this.ScheduleViewBtn.Name = "ScheduleViewBtn";
+            this.ScheduleViewBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.ScheduleViewBtn.Size = new System.Drawing.Size(318, 96);
+            this.ScheduleViewBtn.TabIndex = 7;
+            this.ScheduleViewBtn.Text = "         Thời khóa biểu";
+            this.ScheduleViewBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ScheduleViewBtn.UseVisualStyleBackColor = false;
+            this.ScheduleViewBtn.Click += new System.EventHandler(this.ScheduleViewBtn_Click);
+            // 
+            // AllClassBtn
+            // 
+            this.AllClassBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.AllClassBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AllClassBtn.FlatAppearance.BorderSize = 0;
+            this.AllClassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AllClassBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.AllClassBtn.ForeColor = System.Drawing.Color.White;
+            this.AllClassBtn.Image = global::LanguageCenter.Properties.Resources.class1;
+            this.AllClassBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AllClassBtn.Location = new System.Drawing.Point(0, 192);
+            this.AllClassBtn.Name = "AllClassBtn";
+            this.AllClassBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.AllClassBtn.Size = new System.Drawing.Size(318, 96);
+            this.AllClassBtn.TabIndex = 6;
+            this.AllClassBtn.Text = "         Danh sách lớp học";
+            this.AllClassBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AllClassBtn.UseVisualStyleBackColor = false;
+            this.AllClassBtn.Click += new System.EventHandler(this.AllClassBtn_Click);
+            // 
+            // teacherClassBtn
+            // 
+            this.teacherClassBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.teacherClassBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.teacherClassBtn.FlatAppearance.BorderSize = 0;
+            this.teacherClassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.teacherClassBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.teacherClassBtn.ForeColor = System.Drawing.Color.White;
+            this.teacherClassBtn.Image = global::LanguageCenter.Properties.Resources.open_book1;
+            this.teacherClassBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.teacherClassBtn.Location = new System.Drawing.Point(0, 96);
+            this.teacherClassBtn.Name = "teacherClassBtn";
+            this.teacherClassBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.teacherClassBtn.Size = new System.Drawing.Size(318, 96);
+            this.teacherClassBtn.TabIndex = 1;
+            this.teacherClassBtn.Text = "         Lớp học của tôi";
+            this.teacherClassBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.teacherClassBtn.UseVisualStyleBackColor = false;
+            this.teacherClassBtn.Click += new System.EventHandler(this.teacherClassBtn_Click);
             // 
             // profileBtn
             // 
@@ -227,10 +270,12 @@ namespace LanguageCenter.GUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label txtName;
         private System.Windows.Forms.Button profileBtn;
-        private System.Windows.Forms.Button classMnBtn;
+        private System.Windows.Forms.Button teacherClassBtn;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button ScheduleViewBtn;
+        private System.Windows.Forms.Button AllClassBtn;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button changePwBtn;
     }
 }

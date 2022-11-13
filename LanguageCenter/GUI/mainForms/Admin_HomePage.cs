@@ -16,11 +16,11 @@ namespace LanguageCenter.GUI
         private Form activeForm;
         public int ID { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
         public string Position { get; set; }
         public string Address { get; set; }
         public string Date_Birth { get; set; }
-        public string First_Name { get; set; }
-        public string Last_Name { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public Admin_HomePage()
@@ -29,7 +29,7 @@ namespace LanguageCenter.GUI
         }
         private void Admin_HomePage_Load(object sender, EventArgs e)
         {
-            txtName.Text = "          " + Last_Name + " " + First_Name;
+            txtName.Text = "          " + Name;
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
@@ -56,6 +56,24 @@ namespace LanguageCenter.GUI
 
             } 
         }
+        private void profileBtn_Click(object sender, EventArgs e)
+        {
+            var profile = new childForms.Staff_Profile();
+            profile.ID = ID;
+            profile.Username = Username;
+            profile.Position = Position;
+            profile.Address = Address;
+            profile.Date_Birth = Date_Birth;
+            profile.Name = Name;
+            profile.Email = Email;
+            profile.Phone = Phone;
+            OpenChildForm(profile, sender);
+        }
+
+        private void staffMnBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.StaffManage(), sender);
+        }
 
         private void studentMnBtn_Click(object sender, EventArgs e)
         {
@@ -67,13 +85,20 @@ namespace LanguageCenter.GUI
             OpenChildForm(new childForms.TeacherManage(), sender);
         }
 
-        private void staffMnBtn_Click(object sender, EventArgs e)
+        private void courseMnBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new childForms.StaffManage(), sender);
+            OpenChildForm(new childForms.CourseManage(), sender);
         }
+
+        private void paymentMnBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new childForms.PaymentManage(), sender);
+        }
+
         private void changePwBtn_Click(object sender, EventArgs e)
-        {        
+        {
             var changePw = new ChangePassword();
+            changePw.Username = Username;
             changePw.ShowDialog();
         }
 
@@ -84,24 +109,9 @@ namespace LanguageCenter.GUI
             loginForm.ShowDialog();
         }
 
-        private void profileBtn_Click(object sender, EventArgs e)
+        private void classMnBtn_Click(object sender, EventArgs e)
         {
-            var profile = new childForms.Profile();
-            profile.ID = ID;
-            profile.Username = Username;
-            profile.Position = Position;
-            profile.Address = Address;
-            profile.Date_Birth = Date_Birth;
-            profile.First_Name = First_Name;
-            profile.Last_Name = Last_Name;
-            profile.Email = Email;
-            profile.Phone = Phone;
-            OpenChildForm(profile, sender);
-        }
-
-        private void SalaryMnBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new childForms.SalaryManage(), sender);
+            OpenChildForm(new childForms.ClassManage(), sender);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace LanguageCenter.GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.changePwBtn = new System.Windows.Forms.Button();
-            this.scoreBtn = new System.Windows.Forms.Button();
+            this.LichsugiaodichBtn = new System.Windows.Forms.Button();
             this.scheduleBtn = new System.Windows.Forms.Button();
             this.profileBtn = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
@@ -95,7 +95,7 @@ namespace LanguageCenter.GUI
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.logoutBtn);
             this.panel2.Controls.Add(this.changePwBtn);
-            this.panel2.Controls.Add(this.scoreBtn);
+            this.panel2.Controls.Add(this.LichsugiaodichBtn);
             this.panel2.Controls.Add(this.scheduleBtn);
             this.panel2.Controls.Add(this.profileBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -118,7 +118,7 @@ namespace LanguageCenter.GUI
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.logoutBtn.Size = new System.Drawing.Size(273, 96);
-            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.TabIndex = 7;
             this.logoutBtn.Text = "         Đăng xuất";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.UseVisualStyleBackColor = false;
@@ -138,31 +138,31 @@ namespace LanguageCenter.GUI
             this.changePwBtn.Name = "changePwBtn";
             this.changePwBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.changePwBtn.Size = new System.Drawing.Size(273, 96);
-            this.changePwBtn.TabIndex = 3;
+            this.changePwBtn.TabIndex = 6;
             this.changePwBtn.Text = "         Đổi mật khẩu";
             this.changePwBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changePwBtn.UseVisualStyleBackColor = false;
             this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
             // 
-            // scoreBtn
+            // LichsugiaodichBtn
             // 
-            this.scoreBtn.BackColor = System.Drawing.Color.MidnightBlue;
-            this.scoreBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scoreBtn.FlatAppearance.BorderSize = 0;
-            this.scoreBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scoreBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.scoreBtn.ForeColor = System.Drawing.Color.White;
-            this.scoreBtn.Image = global::LanguageCenter.Properties.Resources.score;
-            this.scoreBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scoreBtn.Location = new System.Drawing.Point(0, 192);
-            this.scoreBtn.Name = "scoreBtn";
-            this.scoreBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.scoreBtn.Size = new System.Drawing.Size(273, 96);
-            this.scoreBtn.TabIndex = 2;
-            this.scoreBtn.Text = "         Điểm số";
-            this.scoreBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scoreBtn.UseVisualStyleBackColor = false;
-            this.scoreBtn.Click += new System.EventHandler(this.scoreBtn_Click);
+            this.LichsugiaodichBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.LichsugiaodichBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LichsugiaodichBtn.FlatAppearance.BorderSize = 0;
+            this.LichsugiaodichBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LichsugiaodichBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.LichsugiaodichBtn.ForeColor = System.Drawing.Color.White;
+            this.LichsugiaodichBtn.Image = global::LanguageCenter.Properties.Resources.credit_card;
+            this.LichsugiaodichBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LichsugiaodichBtn.Location = new System.Drawing.Point(0, 192);
+            this.LichsugiaodichBtn.Name = "LichsugiaodichBtn";
+            this.LichsugiaodichBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.LichsugiaodichBtn.Size = new System.Drawing.Size(273, 96);
+            this.LichsugiaodichBtn.TabIndex = 4;
+            this.LichsugiaodichBtn.Text = "         Lịch sử giao dịch";
+            this.LichsugiaodichBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LichsugiaodichBtn.UseVisualStyleBackColor = false;
+            this.LichsugiaodichBtn.Click += new System.EventHandler(this.LichsugiaodichBtn_Click);
             // 
             // scheduleBtn
             // 
@@ -249,11 +249,11 @@ namespace LanguageCenter.GUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label txtName;
         private System.Windows.Forms.Button profileBtn;
-        private System.Windows.Forms.Button logoutBtn;
-        private System.Windows.Forms.Button changePwBtn;
-        private System.Windows.Forms.Button scoreBtn;
+        private System.Windows.Forms.Button LichsugiaodichBtn;
         private System.Windows.Forms.Button scheduleBtn;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button changePwBtn;
     }
 }
