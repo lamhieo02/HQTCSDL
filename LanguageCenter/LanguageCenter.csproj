@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AccountDAO.cs" />
+    <Compile Include="BLL\StaffDAO.cs" />
+    <Compile Include="BLL\StudentDAO.cs" />
+    <Compile Include="BLL\TeacherDAO.cs" />
     <Compile Include="DAL\DataAccess.cs" />
-    <Compile Include="DAO\AccountDAO.cs" />
-    <Compile Include="DAO\StaffDAO.cs" />
-    <Compile Include="DAO\StudentDAO.cs" />
-    <Compile Include="DAO\TeacherDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Student.cs" />
@@ -276,9 +276,7 @@
   <ItemGroup>
     <None Include="Resources\education.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\reading-book.png" />
   </ItemGroup>

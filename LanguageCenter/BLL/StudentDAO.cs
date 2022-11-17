@@ -6,32 +6,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LanguageCenter.DAO
+namespace LanguageCenter.BLL
 {
-    class StaffDAO
+    class StudentDAO
     {
-        public StaffDAO()
+        public StudentDAO()
         {
 
         }
-        public Staff getStaffByUsername(string username)
+        public Student getStudentByUsername(string username)
         {
             var conn = DAL.DataAccess.getConnection();
             var command = conn.CreateCommand();
 
-            command.CommandText = "select * from Staff where Staff.Username = @username";
+            command.CommandText = "select * from Students where Students.Username = @username";
             command.Parameters.Add(new SqlParameter("@username", username));
 
             SqlDataReader reader = command.ExecuteReader();
             using (reader)
             {
-                if (!reader.Read())
+                if(!reader.Read())
                 {
                     return null;
                 }
-                Staff st = new Staff();
+                Student st = new Student();
+
                 st.Username = Convert.ToString(reader["Username"]);
-                st.Position = Convert.ToString(reader["Position"]);
                 st.Date_Birth = Convert.ToString(reader["Date_Birth"]);
                 st.Address = Convert.ToString(reader["Address"]);
                 st.Name = Convert.ToString(reader["Name"]);
@@ -39,9 +39,8 @@ namespace LanguageCenter.DAO
                 st.Phone = Convert.ToString(reader["Phone"]);
 
                 return st;
-
+               
             }
-;
-        }
+;        }
     }
 }

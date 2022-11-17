@@ -1,4 +1,5 @@
-﻿using LanguageCenter.DTO;
+﻿using LanguageCenter.BLL;
+using LanguageCenter.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LanguageCenter.DAO
+namespace LanguageCenter.BLL 
 {
     class AccountDAO
     {

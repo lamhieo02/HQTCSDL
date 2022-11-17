@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LanguageCenter.DAO
+namespace LanguageCenter.BLL
 {
     class TeacherDAO
     {
