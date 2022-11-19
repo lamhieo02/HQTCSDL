@@ -834,4 +834,4 @@ as begin
 select * from ClassesView where ClassesView.[Course name] = @name
 end
 
-select * from ClassesView
+exec GetClassByCourseName 'TOEIC SW'

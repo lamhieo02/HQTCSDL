@@ -96,5 +96,37 @@ namespace LanguageCenter.GUI.childForms
             da.Fill(dt);
             AllClass_Gridview.DataSource = dt;
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            /*DataTable dt = new DataTable();
+            SanPhamDAO dao = new SanPhamDAO();
+            string searchname = search.Text;
+            dt = dao.GetAllSanPham();
+            dtgListProd.DataSource = dt;*/
+
+            var conn = DAL.DataAccess.getConnection();
+            var command = conn.CreateCommand();
+            SqlDataAdapter da = new SqlDataAdapter("getAllClasses", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            AllClass_Gridview.DataSource = dt;
+
+        /*    dt.DefaultView.RowFilter = string.Format("[{1}] LIKE '%{0}%' OR " +
+                                                     "[{2}] LIKE '%{0}%' OR " +
+                                                     "[{3}] LIKE '%{0}%' OR " +
+                                                     "[{4}] LIKE '%{0}%' OR " +
+                                                     "[{5}] LIKE '%{0}%' OR " +
+                                                     "[{6}] LIKE '%{0}%' OR " +
+                                                     "[{7}] LIKE '%{0}%' OR " +
+                                                     "[{8}] LIKE '%{0}%' OR " +
+                                                     "[{9}] LIKE '%{0}%' OR " +
+                                                     "[{10}] LIKE '%{0}%' OR " +
+                                                     "[{11}] LIKE '%{0}%'", txtSearch.Text, "ID","Class Name","Start Date", "End Date",
+                                                                               "Teacher Name","Course Name","WeekDays","Start_Time","End_Time",
+                                                                               "ClassRoom","No_Students");
+                                             */
+        }
     }
 }
