@@ -40,29 +40,21 @@ namespace LanguageCenter.GUI.childForms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.paymentGridview = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.statusCbb = new System.Windows.Forms.ComboBox();
+            this.methodCbb = new System.Windows.Forms.ComboBox();
+            this.refreshBtn = new LanguageCenter.GUI.Components.RoundedButton();
             this.DeleteBtn = new LanguageCenter.GUI.Components.RoundedButton();
             this.UpdateBtn = new LanguageCenter.GUI.Components.RoundedButton();
             this.AddBtn = new LanguageCenter.GUI.Components.RoundedButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.refreshBtn = new LanguageCenter.GUI.Components.RoundedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentGridview)).BeginInit();
@@ -150,13 +142,6 @@ namespace LanguageCenter.GUI.childForms
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.paymentGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.paymentGridview.ColumnHeadersHeight = 40;
-            this.paymentGridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,72 +168,67 @@ namespace LanguageCenter.GUI.childForms
             this.paymentGridview.RowTemplate.Height = 28;
             this.paymentGridview.Size = new System.Drawing.Size(1568, 641);
             this.paymentGridview.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Ngày thanh toán";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Username";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Số lượng";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Phương thức";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Trạng thái";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
+            this.paymentGridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.paymentGridview_CellClick);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.statusCbb);
+            this.panel2.Controls.Add(this.methodCbb);
             this.panel2.Controls.Add(this.refreshBtn);
             this.panel2.Controls.Add(this.DeleteBtn);
             this.panel2.Controls.Add(this.UpdateBtn);
             this.panel2.Controls.Add(this.AddBtn);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox9);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtAmount);
+            this.panel2.Controls.Add(this.txtDate);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 472);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1568, 277);
             this.panel2.TabIndex = 4;
+            // 
+            // statusCbb
+            // 
+            this.statusCbb.FormattingEnabled = true;
+            this.statusCbb.Items.AddRange(new object[] {
+            "Chưa thanh toán",
+            "Đã thanh toán"});
+            this.statusCbb.Location = new System.Drawing.Point(804, 126);
+            this.statusCbb.Name = "statusCbb";
+            this.statusCbb.Size = new System.Drawing.Size(262, 28);
+            this.statusCbb.TabIndex = 32;
+            // 
+            // methodCbb
+            // 
+            this.methodCbb.FormattingEnabled = true;
+            this.methodCbb.Items.AddRange(new object[] {
+            "Mobile Banking",
+            "Cash",
+            "Visa"});
+            this.methodCbb.Location = new System.Drawing.Point(804, 73);
+            this.methodCbb.Name = "methodCbb";
+            this.methodCbb.Size = new System.Drawing.Size(262, 28);
+            this.methodCbb.TabIndex = 31;
+            // 
+            // refreshBtn
+            // 
+            this.refreshBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshBtn.FlatAppearance.BorderSize = 0;
+            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.refreshBtn.ForeColor = System.Drawing.Color.White;
+            this.refreshBtn.Location = new System.Drawing.Point(1353, 73);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(157, 63);
+            this.refreshBtn.TabIndex = 30;
+            this.refreshBtn.Text = "Làm mới";
+            this.refreshBtn.UseVisualStyleBackColor = false;
             // 
             // DeleteBtn
             // 
@@ -279,6 +259,7 @@ namespace LanguageCenter.GUI.childForms
             this.UpdateBtn.TabIndex = 27;
             this.UpdateBtn.Text = "Sửa";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // AddBtn
             // 
@@ -294,28 +275,21 @@ namespace LanguageCenter.GUI.childForms
             this.AddBtn.TabIndex = 27;
             this.AddBtn.Text = "Thêm";
             this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // textBox7
+            // txtUsername
             // 
-            this.textBox7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox7.Location = new System.Drawing.Point(790, 165);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(304, 32);
-            this.textBox7.TabIndex = 19;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox8.Location = new System.Drawing.Point(790, 119);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(304, 32);
-            this.textBox8.TabIndex = 18;
+            this.txtUsername.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtUsername.Location = new System.Drawing.Point(257, 73);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(304, 32);
+            this.txtUsername.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(655, 168);
+            this.label7.Location = new System.Drawing.Point(84, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 24);
             this.label7.TabIndex = 16;
@@ -331,14 +305,6 @@ namespace LanguageCenter.GUI.childForms
             this.label8.TabIndex = 15;
             this.label8.Text = "Trạng thái:";
             // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox9.Location = new System.Drawing.Point(790, 73);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(304, 32);
-            this.textBox9.TabIndex = 14;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -349,27 +315,27 @@ namespace LanguageCenter.GUI.childForms
             this.label9.TabIndex = 13;
             this.label9.Text = "Phương thức:";
             // 
-            // textBox4
+            // txtAmount
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox4.Location = new System.Drawing.Point(230, 165);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(304, 32);
-            this.textBox4.TabIndex = 11;
+            this.txtAmount.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtAmount.Location = new System.Drawing.Point(257, 168);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(304, 32);
+            this.txtAmount.TabIndex = 11;
             // 
-            // textBox3
+            // txtDate
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox3.Location = new System.Drawing.Point(230, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 32);
-            this.textBox3.TabIndex = 10;
+            this.txtDate.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtDate.Location = new System.Drawing.Point(257, 122);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(304, 32);
+            this.txtDate.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 168);
+            this.label4.Location = new System.Drawing.Point(84, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
             this.label4.TabIndex = 3;
@@ -379,44 +345,11 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 122);
+            this.label3.Location = new System.Drawing.Point(84, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ngày thanh toán:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox2.Location = new System.Drawing.Point(230, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(304, 32);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID thanh toán:";
-            // 
-            // refreshBtn
-            // 
-            this.refreshBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshBtn.FlatAppearance.BorderSize = 0;
-            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Location = new System.Drawing.Point(1353, 73);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(157, 63);
-            this.refreshBtn.TabIndex = 30;
-            this.refreshBtn.Text = "Làm mới";
-            this.refreshBtn.UseVisualStyleBackColor = false;
             // 
             // PaymentManage
             // 
@@ -448,29 +381,21 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.DataGridView paymentGridview;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
         private Components.RoundedButton DeleteBtn;
         private Components.RoundedButton UpdateBtn;
         private Components.RoundedButton AddBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Components.RoundedButton refreshBtn;
+        private System.Windows.Forms.ComboBox statusCbb;
+        private System.Windows.Forms.ComboBox methodCbb;
     }
 }

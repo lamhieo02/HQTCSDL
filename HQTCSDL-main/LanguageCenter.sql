@@ -693,3 +693,66 @@ end
 end
 go
 
+----------------------------------PAYMENTS MANAGE FORM----------------------------------
+-- *** FUNCTIONS ***
+
+go
+-- lấy tên payment method
+create function PaymentMethodName_byId (@id int)
+returns nvarchar(20)
+as begin
+declare @name nvarchar(20) 
+set @name = (select Payment_Methods.Name from Payment_Methods where Payment_Methods.ID = 1)
+return @name
+end
+
+--lấy trạng thái thanh toán theo status bit
+go
+create function TrangThaiThanhToan (@status bit)
+returns nvarchar(30)
+as begin 
+declare @status_name nvarchar(30)
+set @status_name = ''
+if @status = 1
+	begin 
+	set @status_name = 'Đã thanh toán'
+	end
+if @status = 0
+	begin 
+	set @status_name = 'Chưa thanh toán'
+	end
+return @status_name
+end
+go
+--select [dbo].TrangThaiThanhToan(1)
+
+--Quản lí thanh toán chung tất cả Students
+create view PaymentsView
+as
+select Students.Username,Students.Name as 'Họ tên', Students.Email, Students.Phone as 'Số điện thoại', 
+Payments.Payment_Date 'Ngày thanh toán', Amount as 'Số lượng' ,[dbo].PaymentMethodName_byId(Payments.Payment_Method_ID) as 'Phương thức thanh toán',  [dbo].TrangThaiThanhToan(Payments.Status) as 'Trạng thái thanh toán'
+from Payments inner join Students on Students.Username = Payments.Username
+
+go
+-- procedure lấy thông tin Payments
+create procedure getPayments
+as begin 
+select * from PaymentsView
+end
+
+go
+exec getPayments
+
+-- procedure insert Payment
+go
+create procedure InsertPayment @payment_date date, @amount int, @method_id int, @status int, @username nvarchar(30)
+as begin
+insert into Payments values(@payment_date, @amount, @	, @status, @username)
+end
+
+select * from Payments
+
+go
+update Payments
+set Payment_Date = '03-03-2020', Amount = 77777, Payment_Method_ID = 3, Status = 1, Username = 'student01'
+where ID = 1

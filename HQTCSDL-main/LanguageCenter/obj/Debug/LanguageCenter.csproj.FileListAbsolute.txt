@@ -142,3 +142,4 @@ D:\Github\HQTCSDL3\HQTCSDL\HQTCSDL-main\LanguageCenter\obj\Debug\LanguageCenter.
 D:\Github\HQTCSDL3\HQTCSDL\HQTCSDL-main\LanguageCenter\obj\Debug\LanguageCenter.csproj.CoreCompileInputs.cache
 D:\Github\HQTCSDL3\HQTCSDL\HQTCSDL-main\LanguageCenter\obj\Debug\LanguageCenter.exe
 D:\Github\HQTCSDL3\HQTCSDL\HQTCSDL-main\LanguageCenter\obj\Debug\LanguageCenter.pdb
+D:\Github\HQTCSDL3\HQTCSDL\HQTCSDL-main\LanguageCenter\obj\Debug\LanguageCenter.csproj.AssemblyReference.cache
