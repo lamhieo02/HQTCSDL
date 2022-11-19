@@ -40,6 +40,12 @@ namespace LanguageCenter.GUI.childForms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.paymentGridview = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DeleteBtn = new LanguageCenter.GUI.Components.RoundedButton();
             this.UpdateBtn = new LanguageCenter.GUI.Components.RoundedButton();
@@ -56,12 +62,7 @@ namespace LanguageCenter.GUI.childForms
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refreshBtn = new LanguageCenter.GUI.Components.RoundedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentGridview)).BeginInit();
@@ -77,7 +78,7 @@ namespace LanguageCenter.GUI.childForms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1327, 110);
+            this.panel1.Size = new System.Drawing.Size(1568, 110);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -131,7 +132,7 @@ namespace LanguageCenter.GUI.childForms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1327, 639);
+            this.dataGridView1.Size = new System.Drawing.Size(1568, 639);
             this.dataGridView1.TabIndex = 1;
             // 
             // paymentGridview
@@ -180,11 +181,54 @@ namespace LanguageCenter.GUI.childForms
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentGridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.paymentGridview.RowTemplate.Height = 28;
-            this.paymentGridview.Size = new System.Drawing.Size(1327, 641);
+            this.paymentGridview.Size = new System.Drawing.Size(1568, 641);
             this.paymentGridview.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Ngày thanh toán";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Username";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Số lượng";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "Phương thức";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "Trạng thái";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.refreshBtn);
             this.panel2.Controls.Add(this.DeleteBtn);
             this.panel2.Controls.Add(this.UpdateBtn);
             this.panel2.Controls.Add(this.AddBtn);
@@ -203,7 +247,7 @@ namespace LanguageCenter.GUI.childForms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 472);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1327, 277);
+            this.panel2.Size = new System.Drawing.Size(1568, 277);
             this.panel2.TabIndex = 4;
             // 
             // DeleteBtn
@@ -214,7 +258,7 @@ namespace LanguageCenter.GUI.childForms
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(1147, 179);
+            this.DeleteBtn.Location = new System.Drawing.Point(1353, 149);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(157, 63);
             this.DeleteBtn.TabIndex = 28;
@@ -229,7 +273,7 @@ namespace LanguageCenter.GUI.childForms
             this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(1147, 102);
+            this.UpdateBtn.Location = new System.Drawing.Point(1143, 149);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(157, 63);
             this.UpdateBtn.TabIndex = 27;
@@ -244,7 +288,7 @@ namespace LanguageCenter.GUI.childForms
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(1147, 26);
+            this.AddBtn.Location = new System.Drawing.Point(1143, 73);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(157, 63);
             this.AddBtn.TabIndex = 27;
@@ -359,53 +403,26 @@ namespace LanguageCenter.GUI.childForms
             this.label1.TabIndex = 0;
             this.label1.Text = "ID thanh toán:";
             // 
-            // Column1
+            // refreshBtn
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Ngày thanh toán";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Username";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Số lượng";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Phương thức";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Trạng thái";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
+            this.refreshBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshBtn.FlatAppearance.BorderSize = 0;
+            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.refreshBtn.ForeColor = System.Drawing.Color.White;
+            this.refreshBtn.Location = new System.Drawing.Point(1353, 73);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(157, 63);
+            this.refreshBtn.TabIndex = 30;
+            this.refreshBtn.Text = "Làm mới";
+            this.refreshBtn.UseVisualStyleBackColor = false;
             // 
             // PaymentManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 749);
+            this.ClientSize = new System.Drawing.Size(1568, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.paymentGridview);
             this.Controls.Add(this.dataGridView1);
@@ -454,5 +471,6 @@ namespace LanguageCenter.GUI.childForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Components.RoundedButton refreshBtn;
     }
 }

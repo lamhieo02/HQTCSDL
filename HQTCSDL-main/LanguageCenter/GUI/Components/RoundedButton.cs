@@ -12,7 +12,7 @@ namespace LanguageCenter.GUI.Components
     class RoundedButton : Button
     {
         private int borderSize = 0;
-        private int borderRadius = 45;
+        private int borderRadius = 25;
         private Color borderColor = Color.PaleVioletRed;
 
         public RoundedButton()

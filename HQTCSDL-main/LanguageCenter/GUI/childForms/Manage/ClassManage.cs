@@ -22,5 +22,10 @@ namespace LanguageCenter.GUI.childForms
             classGridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             classGridview.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
