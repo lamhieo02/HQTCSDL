@@ -33,7 +33,7 @@ namespace LanguageCenter.GUI
             this.txtName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.changePwBtn = new System.Windows.Forms.Button();
             this.ScheduleViewBtn = new System.Windows.Forms.Button();
             this.AllClassBtn = new System.Windows.Forms.Button();
@@ -94,7 +94,7 @@ namespace LanguageCenter.GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.logoutBtn);
             this.panel2.Controls.Add(this.changePwBtn);
             this.panel2.Controls.Add(this.ScheduleViewBtn);
             this.panel2.Controls.Add(this.AllClassBtn);
@@ -106,24 +106,25 @@ namespace LanguageCenter.GUI
             this.panel2.Size = new System.Drawing.Size(318, 854);
             this.panel2.TabIndex = 2;
             // 
-            // button4
+            // logoutBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::LanguageCenter.Properties.Resources.logout1;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 480);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(318, 96);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "         Đăng xuất";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Image = global::LanguageCenter.Properties.Resources.logout1;
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.Location = new System.Drawing.Point(0, 480);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.logoutBtn.Size = new System.Drawing.Size(318, 96);
+            this.logoutBtn.TabIndex = 11;
+            this.logoutBtn.Text = "         Đăng xuất";
+            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // changePwBtn
             // 
@@ -275,7 +276,7 @@ namespace LanguageCenter.GUI
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button ScheduleViewBtn;
         private System.Windows.Forms.Button AllClassBtn;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button changePwBtn;
     }
 }
