@@ -729,7 +729,7 @@ go
 --Quản lí thanh toán chung tất cả Students
 create view PaymentsView
 as
-select Students.Username,Students.Name as 'Họ tên', Students.Email, Students.Phone as 'Số điện thoại', 
+select ID ,Students.Username,Students.Name as 'Họ tên', Students.Email, Students.Phone as 'Số điện thoại', 
 Payments.Payment_Date 'Ngày thanh toán', Amount as 'Số lượng' ,[dbo].PaymentMethodName_byId(Payments.Payment_Method_ID) as 'Phương thức thanh toán',  [dbo].TrangThaiThanhToan(Payments.Status) as 'Trạng thái thanh toán'
 from Payments inner join Students on Students.Username = Payments.Username
 
@@ -753,6 +753,17 @@ end
 select * from Payments
 
 go
+-- procedure update Payment
+create procedure updatePayment @id int ,@payment_date date, @amount int, @method_id int, @status int, @username nvarchar(30)
+as begin
 update Payments
-set Payment_Date = '03-03-2020', Amount = 77777, Payment_Method_ID = 3, Status = 1, Username = 'student01'
-where ID = 1
+set Payment_Date = @payment_date, Amount = @amount, Payment_Method_ID = @method_id, Status = @status, Username = @username
+where ID = @id
+end
+
+go
+-- procedure delete payment
+create procedure deletePayment @id int
+as begin
+delete from Payments where Payments.ID = @id
+end

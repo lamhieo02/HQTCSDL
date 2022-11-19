@@ -143,6 +143,43 @@ namespace LanguageCenter.GUI.childForms
                     MessageBoxIcon.Information);
         }
 
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "" || txtUsername.Text == "" || txtDate.Text == "" || txtAmount.Text == "" || methodCbb.Text == "" || statusCbb.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn dữ liệu cần xóa!", "Warning",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            int id = Convert.ToInt32(txtID.Text);
+            try
+            {
+                deletePayment(id);
+            }
+            catch
+            {
+                MessageBox.Show("Xoá không thành công! Vui lòng kiểm tra lại dữ liệu cần xóa! ", "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+        public void deletePayment(int id)
+        {
+            var conn = DAL.DataAccess.getConnection();
+            var command = conn.CreateCommand();
+            SqlDataAdapter da = new SqlDataAdapter("deletePayment", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            paymentGridview.DataSource = dt;
+
+            DisplayPaymentsList();
+            MessageBox.Show("Xoá thành công!", "Info",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+        }
         private void paymentGridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -170,5 +207,7 @@ namespace LanguageCenter.GUI.childForms
             statusCbb.Text = "";
             DisplayPaymentsList();
         }
+
+     
     }
 }
