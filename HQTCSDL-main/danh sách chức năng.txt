@@ -1,0 +1,59 @@
+1. Student Manage [Admin_HomePage]
+- Xử lí thêm student (xử nút thêm)
+- bấm vào gridview xem thông tin student (StudentInfo Form)
+*trong StudentInfo Form:
+- load info student từ database
+- xử lí sửa student
+- xử lí xóa student
+- tìm kiếm student
+2. Teacher Manage [Admin_HomePage]
+- Xử lí thêm teacher (xử nút thêm)
+- bấm vào gridview xem thông tin student (TeacherInfo Form)
+*trong TeacherInfo Form:
+- load info teacher từ database
+- xử lí sửa teacher
+- xử lí xóa teacher
+- tìm kiếm teacher
+
+3. Staff Manage [Admin_HomePage]
+- Xử lí thêm staff (xử nút thêm)
+- bấm vào gridview xem thông tin student (StaffInfo Form)
+*trong StaffInfo Form:
+- load info staff từ database
+- xử lí sửa staff
+- xử lí xóa staff	
+- tìm kiếm staff
+
+4. CourseManage [Admin_HomePage]
+- Xử lí thêm course (xử nút thêm)
+- bấm vào gridview xem thông tin student (StaffInfo Form)
+*trong CourseInfo Form:
+- load info course từ database
+- xử lí sửa course 
+- xử lí xóa course 
+- tìm kiếm course
+
+5. ClassManage [Admin_HomePage]
+- Xử lí thêm Class (xử nút thêm)
+- bấm vào gridview xem thông tin student (StaffInfo Form)
+*trong ClassInfo Form:
+- load info class từ database
+- xử lí sửa class 
+- xử lí xóa class
+- tìm kiếm class
+
+6. Payment manage [Admin_HomePage]
+
+7. Score manage (quản lí điểm số học viên) [Student_HomePage]
+
+8. Schedule (học viên xem thời khóa biểu) [Student_HomePage]
+
+9. Salary manage [Admin_HomePage]
+
+8. Đổi mật khẩu [tất cả form có đuôi HomePage]
+
+.. to be continue <3
+
+**** Mục chưa làm được ****
+[Teacher_HomePage]: chưa biết thêm mục nào bên Sidebar (chưa nắm cụ thể tài khoản teacher có những chức năng hay đặc quyền nào)
+
