@@ -46,6 +46,13 @@ namespace LanguageCenter.GUI.childForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            if (txtID.Text == "" || txtUsername.Text == "" || txtDate.Text == "" || txtAmount.Text == "" || methodCbb.Text == "" || statusCbb.Text == "")
+            {
+                MessageBox.Show("Nhập thiếu dữ liệu! ", "Warning",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
             string username = txtUsername.Text;
             string date = txtDate.Text;
             int amount = Convert.ToInt32(txtAmount.Text);
@@ -87,11 +94,40 @@ namespace LanguageCenter.GUI.childForms
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            /*
+            if (txtID.Text == "" || txtUsername.Text == "" || txtDate.Text == "" || txtAmount.Text == "" || methodCbb.Text == "" || statusCbb.Text == "")
+            {
+                MessageBox.Show("Nhập thiếu dữ liệu! ", "Warning",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            int id = Convert.ToInt32(txtID.Text);
+            string username = txtUsername.Text;
+            string payment_date = txtDate.Text;
+            int amount = Convert.ToInt32(txtAmount.Text);
+            int method_id = Convert.ToInt32(methodCbb.SelectedIndex) + 1;
+            int status = Convert.ToInt32(statusCbb.SelectedIndex);
+           
+         
+            try
+            {
+                UpdatePayment(id, payment_date,amount,method_id,status,username);
+            }
+            catch
+            {
+                MessageBox.Show("Update không thành công! Vui lòng kiểm tra lại dữ liệu update! ", "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+        }
+        public void UpdatePayment(int id,string payment_date, int amount, int method_id,int status,string username)
+        {
             var conn = DAL.DataAccess.getConnection();
             var command = conn.CreateCommand();
-            SqlDataAdapter da = new SqlDataAdapter("InsertPayment", conn);
+            SqlDataAdapter da = new SqlDataAdapter("updatePayment", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
             da.SelectCommand.Parameters.Add("@payment_date", SqlDbType.Date).Value = payment_date;
             da.SelectCommand.Parameters.Add("@amount", SqlDbType.Int).Value = amount;
             da.SelectCommand.Parameters.Add("@method_id", SqlDbType.Int).Value = method_id;
@@ -102,9 +138,9 @@ namespace LanguageCenter.GUI.childForms
             paymentGridview.DataSource = dt;
 
             DisplayPaymentsList();
-            MessageBox.Show("Thêm thành công!", "Info",
+            MessageBox.Show("Update thành công!", "Info",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);*/
+                    MessageBoxIcon.Information);
         }
 
         private void paymentGridview_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -112,16 +148,27 @@ namespace LanguageCenter.GUI.childForms
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.paymentGridview.Rows[e.RowIndex];
-                txtUsername.Text = row.Cells[0].Value.ToString();
-                txtDate.Text = row.Cells[4].Value.ToString();
-                txtAmount.Text = row.Cells[5].Value.ToString();
-                methodCbb.Text = row.Cells[6].Value.ToString();
+                txtID.Text = row.Cells[0].Value.ToString();
+                txtUsername.Text = row.Cells[1].Value.ToString();
+                txtDate.Text = row.Cells[5].Value.ToString();
+                txtAmount.Text = row.Cells[6].Value.ToString();
+                methodCbb.Text = row.Cells[7].Value.ToString();
                 int status;
-                string statusStr = row.Cells[4].Value.ToString();
+                string statusStr = row.Cells[8].Value.ToString();
                 if (statusStr == "Đã thanh toán") status = 1;
                 else status = 0;
-                statusCbb.Text = Convert.ToString(status);
+                statusCbb.Text = Convert.ToString(statusStr);
             }
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtDate.Text = "";
+            txtAmount.Text = "";
+            methodCbb.Text = "";
+            statusCbb.Text = "";
+            DisplayPaymentsList();
         }
     }
 }

@@ -29,10 +29,10 @@ namespace LanguageCenter.GUI.childForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@ namespace LanguageCenter.GUI.childForms
             this.txtDate = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentGridview)).BeginInit();
@@ -133,38 +135,38 @@ namespace LanguageCenter.GUI.childForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.paymentGridview.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.paymentGridview.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.paymentGridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.paymentGridview.DefaultCellStyle = dataGridViewCellStyle6;
             this.paymentGridview.Location = new System.Drawing.Point(0, 108);
             this.paymentGridview.Name = "paymentGridview";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentGridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.paymentGridview.RowHeadersVisible = false;
             this.paymentGridview.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentGridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentGridview.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.paymentGridview.RowTemplate.Height = 28;
             this.paymentGridview.Size = new System.Drawing.Size(1568, 641);
             this.paymentGridview.TabIndex = 2;
@@ -172,6 +174,8 @@ namespace LanguageCenter.GUI.childForms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtID);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.statusCbb);
             this.panel2.Controls.Add(this.methodCbb);
             this.panel2.Controls.Add(this.refreshBtn);
@@ -198,9 +202,9 @@ namespace LanguageCenter.GUI.childForms
             this.statusCbb.Items.AddRange(new object[] {
             "Chưa thanh toán",
             "Đã thanh toán"});
-            this.statusCbb.Location = new System.Drawing.Point(804, 126);
+            this.statusCbb.Location = new System.Drawing.Point(796, 175);
             this.statusCbb.Name = "statusCbb";
-            this.statusCbb.Size = new System.Drawing.Size(262, 28);
+            this.statusCbb.Size = new System.Drawing.Size(303, 28);
             this.statusCbb.TabIndex = 32;
             // 
             // methodCbb
@@ -210,9 +214,9 @@ namespace LanguageCenter.GUI.childForms
             "Mobile Banking",
             "Cash",
             "Visa"});
-            this.methodCbb.Location = new System.Drawing.Point(804, 73);
+            this.methodCbb.Location = new System.Drawing.Point(796, 122);
             this.methodCbb.Name = "methodCbb";
-            this.methodCbb.Size = new System.Drawing.Size(262, 28);
+            this.methodCbb.Size = new System.Drawing.Size(303, 28);
             this.methodCbb.TabIndex = 31;
             // 
             // refreshBtn
@@ -223,12 +227,13 @@ namespace LanguageCenter.GUI.childForms
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Location = new System.Drawing.Point(1353, 73);
+            this.refreshBtn.Location = new System.Drawing.Point(1380, 70);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(157, 63);
             this.refreshBtn.TabIndex = 30;
             this.refreshBtn.Text = "Làm mới";
             this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -238,7 +243,7 @@ namespace LanguageCenter.GUI.childForms
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(1353, 149);
+            this.DeleteBtn.Location = new System.Drawing.Point(1380, 146);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(157, 63);
             this.DeleteBtn.TabIndex = 28;
@@ -253,7 +258,7 @@ namespace LanguageCenter.GUI.childForms
             this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(1143, 149);
+            this.UpdateBtn.Location = new System.Drawing.Point(1170, 146);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(157, 63);
             this.UpdateBtn.TabIndex = 27;
@@ -269,7 +274,7 @@ namespace LanguageCenter.GUI.childForms
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(1143, 73);
+            this.AddBtn.Location = new System.Drawing.Point(1170, 70);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(157, 63);
             this.AddBtn.TabIndex = 27;
@@ -280,7 +285,7 @@ namespace LanguageCenter.GUI.childForms
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtUsername.Location = new System.Drawing.Point(257, 73);
+            this.txtUsername.Location = new System.Drawing.Point(271, 125);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(304, 32);
             this.txtUsername.TabIndex = 19;
@@ -289,7 +294,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(84, 73);
+            this.label7.Location = new System.Drawing.Point(98, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 24);
             this.label7.TabIndex = 16;
@@ -299,7 +304,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(655, 122);
+            this.label8.Location = new System.Drawing.Point(647, 171);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 24);
             this.label8.TabIndex = 15;
@@ -309,7 +314,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(655, 76);
+            this.label9.Location = new System.Drawing.Point(647, 125);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 24);
             this.label9.TabIndex = 13;
@@ -318,7 +323,7 @@ namespace LanguageCenter.GUI.childForms
             // txtAmount
             // 
             this.txtAmount.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtAmount.Location = new System.Drawing.Point(257, 168);
+            this.txtAmount.Location = new System.Drawing.Point(795, 70);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(304, 32);
             this.txtAmount.TabIndex = 11;
@@ -326,7 +331,7 @@ namespace LanguageCenter.GUI.childForms
             // txtDate
             // 
             this.txtDate.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtDate.Location = new System.Drawing.Point(257, 122);
+            this.txtDate.Location = new System.Drawing.Point(271, 174);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(304, 32);
             this.txtDate.TabIndex = 10;
@@ -335,7 +340,7 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 171);
+            this.label4.Location = new System.Drawing.Point(647, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
             this.label4.TabIndex = 3;
@@ -345,11 +350,30 @@ namespace LanguageCenter.GUI.childForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 125);
+            this.label3.Location = new System.Drawing.Point(98, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ngày thanh toán:";
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtID.Location = new System.Drawing.Point(271, 73);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(304, 32);
+            this.txtID.TabIndex = 34;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 24);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "ID:";
             // 
             // PaymentManage
             // 
@@ -397,5 +421,7 @@ namespace LanguageCenter.GUI.childForms
         private Components.RoundedButton refreshBtn;
         private System.Windows.Forms.ComboBox statusCbb;
         private System.Windows.Forms.ComboBox methodCbb;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label1;
     }
 }
