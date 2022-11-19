@@ -715,11 +715,11 @@ declare @status_name nvarchar(30)
 set @status_name = ''
 if @status = 1
 	begin 
-	set @status_name = 'Đã thanh toán'
+	set @status_name = N'Đã thanh toán'
 	end
 if @status = 0
 	begin 
-	set @status_name = 'Chưa thanh toán'
+	set @status_name = N'Chưa thanh toán'
 	end
 return @status_name
 end
@@ -747,7 +747,7 @@ exec getPayments
 go
 create procedure InsertPayment @payment_date date, @amount int, @method_id int, @status int, @username nvarchar(30)
 as begin
-insert into Payments values(@payment_date, @amount, @	, @status, @username)
+insert into Payments values(@payment_date, @amount, @@method_id, @status, @username)
 end
 
 select * from Payments
@@ -767,3 +767,71 @@ create procedure deletePayment @id int
 as begin
 delete from Payments where Payments.ID = @id
 end
+
+go
+create function getCourseName_byID (@id int) 
+returns nvarchar(30)
+as begin
+declare @name nvarchar(30)
+set @name = (select Courses.Name from Courses where Courses.ID = 1)
+return @name
+end
+--select [dbo].getCourseName_byID(1)
+
+go
+create function getTeacherName_byUsername (@username nvarchar(30)) 
+returns nvarchar(30)
+as begin
+declare @name nvarchar(30)
+set @name = (select Teachers.Name from Teachers where Teachers.Username = @username)
+return @name
+end
+go
+
+--select [dbo].getTeacherName_byUsername('teacher01')
+
+go
+create view ClassesView
+as
+select Classes.ID, Classes.Name as 'Class Name', Classes.Start_Date as 'Start Date', Classes.End_Date as 'End Date', [dbo].getTeacherName_byUsername(Classes.Username) 
+as 'Teacher name', [dbo].getCourseName_byID(Classes.Course_ID) as 'Course name', Classes.WeekDays, Classes.Start_Time, Classes.End_Time, Classes.ClassRoom, Classes.No_Students
+from Classes
+
+go
+-- procedure xem tất cả các lớp học của teacher
+create procedure getAllClasses
+as 
+select * from ClassesView
+go
+--exec getAllClasses
+
+-- Tìm kiếm class bằng teacher name
+go
+create procedure GetClassByTeacherName @name nvarchar(30)
+as begin
+select * from ClassesView where ClassesView.[Teacher name] = @name
+end
+
+-- Tìm kiếm class bằng class id
+go
+create procedure GetClassByClassID @id int
+as begin
+select * from ClassesView where ClassesView.ID = @id
+end
+
+
+-- Tìm kiếm class bằng class name
+go
+create procedure GetClassByClassName @name nvarchar(30)
+as begin
+select * from ClassesView where ClassesView.[Class Name] = @name
+end
+
+-- Tìm kiếm class bằng course name
+go
+create procedure GetClassByCourseName @name nvarchar(30)
+as begin
+select * from ClassesView where ClassesView.[Course name] = @name
+end
+
+select * from ClassesView

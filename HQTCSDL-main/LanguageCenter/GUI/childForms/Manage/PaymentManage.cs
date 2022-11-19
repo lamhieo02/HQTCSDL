@@ -40,7 +40,8 @@ namespace LanguageCenter.GUI.childForms
         private void ClassManage_Load(object sender, EventArgs e)
         {
             paymentGridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-           // paymentGridview.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.MaximumSize = new Size(1280, 800);
+            // paymentGridview.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DisplayPaymentsList();
         }
 
